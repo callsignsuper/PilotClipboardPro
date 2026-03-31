@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-03-31T00:00:00Z",
+  "files": {
+    "a380_limitations": {
+      "version": 1,
+      "hash": "ee01f9284f8e3a9271239a86eb0511e18893f9a01849159f649b8025c649f917",
+      "url": "a380_limitations.json",
+      "size_bytes": 9965
+    },
+    "a380_memory_items": {
+      "version": 1,
+      "hash": "60ec3354ada4ef4f8025a3e75f6323c8f4e1ec4918d2602c3179adf4806215b6",
+      "url": "a380_memory_items.json",
+      "size_bytes": 17907
+    },
+    "delay_codes": {
+      "version": 1,
+      "hash": "2af54f95ba9e87cf968f0ccd8bf414d8306bf99f8d0c3cabdb393417efd4e1c3",
+      "url": "delay_codes.json",
+      "size_bytes": 48496
+    },
+    "fuel_codes": {
+      "version": 1,
+      "hash": "b3e7501b0a37383662e68d4bd630d2a424aed8bb7cfb64d747d19f8d3cdea92f",
+      "url": "fuel_codes.json",
+      "size_bytes": 5413
+    },
+    "pa_scripts": {
+      "version": 1,
+      "hash": "0c670d9aab77e729adf37aaaec8c4261f1256613599b34dec74f8f6ea5fa90d6",
+      "url": "pa_scripts.json",
+      "size_bytes": 46589
+    }
+  }
+}
