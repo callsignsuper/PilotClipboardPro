@@ -1,0 +1,123 @@
+{
+    "aircraft_type": "A380",
+    "source": "Oral Knowledge Validation Question Bank",
+    "revision": "Rev 11",
+    "date": "2025-10-10",
+    "version": 1,
+    "systems": [
+        {
+            "id": "general",
+            "name": "General",
+            "icon": "airplane",
+            "limitations": [
+                {"id": "gen_max_alt", "title": "Maximum operating altitude", "value": "43,100 ft"},
+                {"id": "gen_struct_weights", "title": "Maximum structural weights (TAXI/MTOW/MLW/MZFW)", "value": "As specified in the LIM chapter"},
+                {"id": "gen_max_config_speeds", "title": "Maximum speeds per flap/slat configuration", "value": "As specified on cockpit placard and PFD"},
+                {"id": "gen_max_gear_speed", "title": "Maximum speed â landing gear extended", "value": "250 kt / M 0.55"},
+                {"id": "gen_max_flap_alt", "title": "Maximum altitude â slats/flaps extended", "value": "20,000 ft"},
+                {"id": "gen_turb_speed", "title": "Recommended turbulence speed (VRA)", "value": "Green dot to 300 kt / M 0.85", "note": "As per MFD/PERF CRZ 'MAX TURB'"},
+                {"id": "gen_max_tire_speed", "title": "Maximum tire speed (ground speed)", "value": "204 kt"},
+                {"id": "gen_max_window_open", "title": "Maximum cockpit window open speed", "value": "250 kt"},
+                {"id": "gen_max_window_close", "title": "Maximum cockpit window closing speed", "value": "160 kt"},
+                {"id": "gen_max_wiper_speed", "title": "Maximum speed â windshield wipers", "value": "250 kt"},
+                {"id": "gen_max_xwind_to", "title": "Maximum crosswind â takeoff (dry, gusts included)", "value": "35 kt"},
+                {"id": "gen_max_xwind_ld", "title": "Maximum crosswind â manual landing (dry, gusts included)", "value": "40 kt"}
+            ]
+        },
+        {
+            "id": "air_conditioning",
+            "name": "Air Conditioning / Pressurization",
+            "icon": "wind",
+            "limitations": [
+                {"id": "ac_lp_ground", "title": "LP Ground Unit airflow limitation", "value": "Must not exceed 6.3 kg/sec"},
+                {"id": "ac_hp_ground", "title": "HP Ground Unit limitation", "value": "Do not use bleed air from APU BLEED and HP Air Start Unit at the same time"}
+            ]
+        },
+        {
+            "id": "auto_flight",
+            "name": "Auto Flight",
+            "icon": "gyroscope",
+            "limitations": [
+                {"id": "af_min_autoland_wt", "title": "Minimum weight for Autoland", "value": "305,000 kg"},
+                {"id": "af_min_ap_to", "title": "Minimum AP height â takeoff", "value": "100 ft AGL, and at least 5 sec after lift-off"},
+                {"id": "af_min_ap_npa", "title": "Minimum AP height â Non-Precision Approach", "value": "200 ft AGL"},
+                {"id": "af_min_ap_circling", "title": "Minimum AP height â Circling Approach", "value": "200 ft AGL"},
+                {"id": "af_min_ap_cat1", "title": "Minimum AP height â ILS CAT1 / APPR1", "value": "160 ft AGL"},
+                {"id": "af_min_ap_ga", "title": "Minimum AP height â Go Around engagement", "value": "100 ft AGL"},
+                {"id": "af_min_ap_other", "title": "Minimum AP height â all other phases", "value": "500 ft AGL"},
+                {"id": "af_cat23_wind", "title": "CAT 2/3 ILS maximum winds", "value": "H/W 38 kt Â· TW 10 kt Â· XW 30 kt", "note": "Based on tower-reported surface wind. If ND exceeds limits but tower is within, AP can remain engaged."},
+                {"id": "af_open_des", "title": "AP/FD in OPEN DES or DES mode", "value": "Not permitted if selected altitude below 500 ft or MDA(H)/DA(H), whichever is higher"},
+                {"id": "af_obstacle", "title": "Obstacle clearance / FMGS constraints", "value": "Remains the flight crew's responsibility"},
+                {"id": "af_rnp_apch", "title": "RNP APCH without GPS PRIMARY", "value": "Not authorized â at least 1 GPS required"},
+                {"id": "af_nav_terminal", "title": "NAV mode in terminal area prerequisites", "value": "GPS PRIMARY available, or HIGH accuracy with RNP checked, or crosscheck with raw data"},
+                {"id": "af_oei_npa", "title": "AP for Non-Precision Approach â one engine inop", "value": "No limitation specified"},
+                {"id": "af_cat3_alert", "title": "Alert Height â CAT 3 Fail Operational (Dual) ILS", "value": "200 ft"}
+            ]
+        },
+        {
+            "id": "fuel",
+            "name": "Fuel",
+            "icon": "fuelpump",
+            "limitations": [
+                {"id": "fuel_imbalance", "title": "Maximum fuel imbalance (inner/outer tanks)", "value": "As specified in the LIM Chapter"},
+                {"id": "fuel_max_temp", "title": "Maximum fuel temperature", "value": "+53Â°C"},
+                {"id": "fuel_min_temp", "title": "Minimum fuel temperature", "value": "As specified in the LIM Chapter"},
+                {"id": "fuel_min_qty_to", "title": "Minimum fuel quantity for takeoff", "value": "If transfer tank not empty: ensure > 4,000 kg in each feed tank before pushback"},
+                {"id": "fuel_types", "title": "Certified fuel types", "value": "JET A, JET A1, and as specified in LIM Chapter"}
+            ]
+        },
+        {
+            "id": "landing_gear",
+            "name": "Landing Gear",
+            "icon": "arrow.down.to.line",
+            "limitations": [
+                {"id": "lg_max_brake_temp", "title": "Maximum brake temperature for takeoff", "value": "300Â°C", "note": "Pilots MUST NOT commence takeoff if exceeded. Delaying L/G retraction to reduce brake temp IS NOT an approved procedure."},
+                {"id": "lg_max_ext_speed", "title": "Maximum gear extension/retraction speed", "value": "250 kt / M 0.55"},
+                {"id": "lg_deflated_tires", "title": "Taxi with deflated/damaged tires", "value": "Max speed 3 kt Â· NSW angle 30Â° Â· Up to 9 tires deflated", "note": "Max per gear: 1 nose, 2 body (not same axle), 2 wing (not same axle). For runway vacating only, same axle permitted."}
+            ]
+        },
+        {
+            "id": "oxygen",
+            "name": "Oxygen",
+            "icon": "lungs",
+            "limitations": [
+                {"id": "o2_min_required", "title": "Minimum oxygen for flight", "value": "As specified in LIM Chapter tables"},
+                {"id": "o2_mask_position", "title": "Loss of cabin pressure â mask regulator assumed position", "value": "NORMAL (diluted oxygen)", "note": "Times based on sealed mask. May be shorter for bearded crew."},
+                {"id": "o2_smoke_duration", "title": "Smoke protection duration â 100% Oâ", "value": "15 min at 8,000 ft cabin altitude", "note": "Based on sealed mask. May be shorter for bearded crew."}
+            ]
+        },
+        {
+            "id": "apu",
+            "name": "APU",
+            "icon": "bolt.circle",
+            "limitations": [
+                {"id": "apu_oil_lo", "title": "APU with OIL LEVEL LO advisory", "value": "May start and operate. Maintenance required within 14 hours."},
+                {"id": "apu_consec_starts", "title": "Consecutive APU start attempts", "value": "3 attempts (duty cycles), 60 sec between each, 60 min cool down after third"},
+                {"id": "apu_max_egt", "title": "Maximum APU EGT", "value": "Red line limit on EGT scale"},
+                {"id": "apu_max_start_alt", "title": "Maximum altitude/speed â APU start", "value": "20,000 ft with Mach < 0.56"},
+                {"id": "apu_batt_start", "title": "Maximum altitude â APU start batteries only (ELEC EMER CONFIG)", "value": "20,000 ft"},
+                {"id": "apu_bleed_single", "title": "Maximum altitude â APU bleed single pack", "value": "22,500 ft"},
+                {"id": "apu_bleed_dual", "title": "Maximum altitude â APU bleed dual pack", "value": "22,500 ft"},
+                {"id": "apu_bleed_eng_start", "title": "Maximum altitude â APU bleed for engine start", "value": "22,500 ft"},
+                {"id": "apu_wing_anti_ice", "title": "APU bleed for wing anti-ice", "value": "NOT PERMITTED"},
+                {"id": "apu_fuel_both", "title": "APU fuel consumption â ground, both pack + gen ON", "value": "515 kg/h"},
+                {"id": "apu_fuel_gen_only", "title": "APU fuel consumption â ground, gen only", "value": "470 kg/h"}
+            ]
+        },
+        {
+            "id": "powerplant",
+            "name": "Powerplant",
+            "icon": "engine.combustion",
+            "limitations": [
+                {"id": "pw_min_oil_qty", "title": "Minimum engine oil quantity", "value": "FT < 10h â 10 qts Â· FT â¥ 10h â 6.0 + 0.4/h", "note": "Per OM-A 8.1.7.7 â minimum quantity plus estimated consumption"},
+                {"id": "pw_min_oil_temp", "title": "Minimum oil temperature for takeoff", "value": "+50Â°C"},
+                {"id": "pw_toga_time", "title": "Maximum TOGA thrust duration", "value": "5 min normal Â· 10 min engine failure"},
+                {"id": "pw_max_egt", "title": "Maximum EGT â any phase", "value": "Red line limit on EGT scale"},
+                {"id": "pw_starter_limits", "title": "Engine starter limitations", "value": "3 attempts Ã 5 min, 2 min cool between. After 15 min accumulated: 30 min cool down.", "note": "Tailwind > 25 kt may adversely affect start. May need to reposition into wind."},
+                {"id": "pw_reverse", "title": "Reverse thrust limitations", "value": "In-flight: PROHIBITED Â· Backing: not permitted Â· Max reverse below 70 kt: not permitted Â· Idle reverse: allowed to stop"},
+                {"id": "pw_derate_contam", "title": "Reduced thrust takeoff â contaminated runway", "value": "NOT PERMITTED"},
+                {"id": "pw_derate_inop", "title": "Reduced thrust takeoff â inoperative systems", "value": "Permitted if performance shortfall applied"}
+            ]
+        }
+    ]
+}
