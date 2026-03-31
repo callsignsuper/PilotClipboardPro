@@ -1,0 +1,76 @@
+{
+  "revision": "Rev 04",
+  "effective_date": "2020-06-14",
+  "overview": "The fuel code accounts for the difference in fuel between last OFP Block Fuel received by the crew, and the actual fuel on-board at Chocks-Off. All Fuel codes are used at Departure. For each code used, a reason/comment must be entered in FOL remarks.",
+  "naming_convention": {
+    "first_letter": "Phase of flight: D=Departure, E=En-route, A=Arrival (except Group 3)",
+    "remaining_three": "Reason code"
+  },
+  "reason_codes": {
+    "ATC": "Imposed ATC restrictions",
+    "WXX": "Unplanned weather (i.e. De-icing)",
+    "RWY": "Change of Runway",
+    "FOB": "Fuel on Board from previous sector",
+    "MEL": "Items not included in OFP",
+    "ZFW": "Drop or increase in ZFW",
+    "SCF": "Increase Statistical Contingency Fuel from 95% to 99%"
+  },
+  "groups": [
+    {
+      "id": "group_1",
+      "name": "Group 1 â Departure",
+      "phase": "Departure",
+      "description": "Standard departure fuel codes with phase prefix D (Departure)",
+      "codes": [
+        { "code": "DATC", "reason": "ATC", "full_name": "Departure ATC Restrictions", "description": "Imposed ATC restrictions at departure", "phase_prefix": "D" },
+        { "code": "DWXX", "reason": "WXX", "full_name": "Departure Weather", "description": "Unplanned weather (i.e. De-icing) at departure", "phase_prefix": "D" },
+        { "code": "DRWY", "reason": "RWY", "full_name": "Departure Runway Change", "description": "Change of runway at departure", "phase_prefix": "D" },
+        { "code": "DFOB", "reason": "FOB", "full_name": "Departure Fuel on Board", "description": "Fuel on board from previous sector", "phase_prefix": "D" },
+        { "code": "DMEL", "reason": "MEL", "full_name": "Departure MEL Items", "description": "MEL items not included in OFP", "phase_prefix": "D" },
+        { "code": "DZFW", "reason": "ZFW", "full_name": "Departure ZFW Change", "description": "Drop or increase in ZFW at departure", "phase_prefix": "D" },
+        { "code": "DSCF", "reason": "SCF", "full_name": "Departure Statistical Contingency Fuel", "description": "Increase Statistical Contingency Fuel from 95% to 99%", "phase_prefix": "D" }
+      ]
+    },
+    {
+      "id": "group_2",
+      "name": "Group 2 â En-route / Arrival",
+      "phase": "En-route / Arrival",
+      "description": "En-route (E) and Arrival (A) fuel codes. ZFW, MEL, and SCF codes are not applicable for en-route/arrival.",
+      "codes": [
+        { "code": "EATC", "reason": "ATC", "full_name": "En-route ATC Restrictions", "description": "Imposed ATC restrictions en-route", "phase_prefix": "E" },
+        { "code": "EWXX", "reason": "WXX", "full_name": "En-route Weather", "description": "Unplanned weather en-route", "phase_prefix": "E" },
+        { "code": "AATC", "reason": "ATC", "full_name": "Arrival ATC Restrictions", "description": "Imposed ATC restrictions at arrival", "phase_prefix": "A" },
+        { "code": "AWXX", "reason": "WXX", "full_name": "Arrival Weather", "description": "Unplanned weather at arrival", "phase_prefix": "A" },
+        { "code": "ARWY", "reason": "RWY", "full_name": "Arrival Runway Change", "description": "Change of runway at arrival", "phase_prefix": "A" }
+      ]
+    },
+    {
+      "id": "group_3",
+      "name": "Group 3 â Departure Only (Special)",
+      "phase": "Departure Only",
+      "description": "New special fuel codes used at Departure ONLY. These do not follow the phase-prefix naming convention.",
+      "codes": [
+        { "code": "BAPU", "reason": "APU", "full_name": "Burn APU", "description": "Compensate for unplanned APU fuel burn", "phase_prefix": null },
+        { "code": "COFP", "reason": "OFP", "full_name": "Changes OFP", "description": "Fuel values changes in latest OFP not associated with ZFW (i.e. last minute changes to flight plan)", "phase_prefix": null },
+        { "code": "NOTM", "reason": "NOTAM", "full_name": "NOTAM Fuel", "description": "Additional fuel requested by NOTAM", "phase_prefix": null },
+        { "code": "VVIP", "reason": "VVIP", "full_name": "VVIP Fuel", "description": "Additional fuel uplift strictly used when a designated VVIP on-board", "phase_prefix": null },
+        { "code": "ERRR", "reason": "Error", "full_name": "Fuel Error", "description": "Inadvertent fuel uplift errors (over-fuel)", "phase_prefix": null }
+      ]
+    }
+  ],
+  "examples": [
+    { "scenario": "AUH departure runway change from 31L to 13R", "code": "DRWY", "comment": "13R IN USE 31L PLANNED" },
+    { "scenario": "Last minute ZFW decrease", "code": "DZFW", "comment": "2000 KG ZFW DROP" },
+    { "scenario": "Remaining fuel from previous tankering flight", "code": "DFOB", "comment": "1100 KG DUE PREV TANKERING" },
+    { "scenario": "Enroute weather avoidance", "code": "EATC EWXX", "comment": "CYCLONE ENROUTE" },
+    { "scenario": "Additional APU burn due to slot allocation beyond STD", "code": "BAPU", "comment": "ADD APU BURN DUE TO SLOT" },
+    { "scenario": "Potential congestion at arrival", "code": "AATC", "comment": "D/T CONGESTED ARR AIRPORT" }
+  ],
+  "notes": [
+    "The figure may be positive or negative",
+    "Positive (+): Actual fuel more than fuel on latest OFP version",
+    "Negative (-): Actual fuel less than fuel on latest OFP version",
+    "Example: DZFW -0.5 ton: ZFW drop resulting in 500KGs less uplift",
+    "Codes and uplifted fuel quantities must also be annotated on the OFP"
+  ]
+}
