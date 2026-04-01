@@ -183,7 +183,7 @@ struct ContentView: View {
         case .approach:
             ApproachPlaceholderView()
         case .pa:
-            PAPlaceholderView()
+            PAView()
         case .notes:
             NotesPlaceholderView()
         case .contextual:
@@ -199,13 +199,13 @@ struct ContentView: View {
     private func contextualView(for section: MenuSection) -> some View {
         switch section {
         case .limitations:
-            LimitationsPlaceholderView()
+            LimitationsView()
         case .memoryItems:
-            MemoryItemsPlaceholderView()
+            MemoryItemsView()
         case .diversion:
             DiversionPlaceholderView()
         case .coldOps:
-            ColdOpsPlaceholderView()
+            ColdOpsView()
         case .grf, .snowtamRU:
             GRFPlaceholderView()
         case .ftl:
@@ -319,7 +319,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+#Preview(traits: .landscapeLeft) {
     ContentView()
-        .previewInterfaceOrientation(.landscapeLeft)
 }
