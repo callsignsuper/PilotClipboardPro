@@ -1,0 +1,641 @@
+{
+  "version": "2.0.0",
+  "last_updated": "2026-03-30",
+  "update_type": "silent",
+  "handbook_revision": "Rev 01, 10 Nov 2019",
+  "scripts": [
+    {
+      "id": "welcome_auh",
+      "title": "WELCOME — ABU DHABI",
+      "order": 1,
+      "phase": "pre_departure",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 45,
+      "variants": [
+        {
+          "id": "welcome_auh_default",
+          "label": null,
+          "note": null,
+          "body": "Good [morning/afternoon/evening] ladies and gentlemen and welcome on board*.\nThis is your [rank, first name] together with [ranks and first names of the flight crew].* It is our pleasure to take you to {{destination}} tonight/today. Our planned flight time is {{flight_time}}**.\n\n• The weather on route is expected to be good*. However, I recommend keeping your seatbelts fastened whenever seated and please ensure seatbelts are fastened when the seatbelt sign is on**.\n• We are expecting some turbulence [on our route/ {{turbulence_time}} after takeoff]*. Please ensure you keep your seatbelt fastened whenever seated and when the seatbelt sign is on**.\n\nWe are currently expecting to depart\n• on time**.\n• ahead schedule**.\n• {{delay_minutes}} after our scheduled departure time\n  - due to heavy traffic**.\n  - due to weather**.\n  - as the final preparations have not yet been completed**.\n  - as we are waiting for the last few Guests**.\n\nPrior to our arrival at {{destination}} we will update you with the arrival time and weather*. Thank you and have a pleasant flight.",
+          "body_ar": "حضرات الضيوف الكرام أسعد الله صباحكم/ مساءكم بكل خير، مرحباً بكم على متن رحلتنا لهذا اليوم\nمعكم قائد الطائرة (...) بالأصالة عن نفسي وبالنيابة عن زميلي (....) وباقي أفراد طاقم الطائرة، يسرني الترحيب بكم اليوم/الليلة على متن رحلة الاتحاد للطيران المتجهة إلى (اسم الوجهة). سوف تستغرق رحلتنا حوالي (ساعة، دقيقة).\n\n• من المتوقع أن تكون حالة الطقس جيدة بوجه عام خلال الرحلة. لكن أنصح بالإبقاء على أحزمة المقاعد مربوطة أثناء الجلوس، والتأكد من ربطها عند إضاءة إشارة ربط أحزمة المقاعد.\n• نتوقع بعض المطبات الهوائية [خلال مسار رحلتنا/ بعد ساعات/دقائق من الإقلاع]. يرجى التأكد من الإبقاء على أحزمة المقاعد مربوطة أثناء الجلوس وعند إضاءة إشارة ربط أحزمة المقاعد.\n\nنتوقع أن نغادر،\n• في الموعد المقرر للإقلاع.\n• قبل الموعد المقرر للإقلاع.\n• بعد الموعد المقرر للإقلاع\n\nقبل بدء الاهبوط التدريجي إلى (اسم الوجهة)، سوف نوافيكم بالتوقيت المتوقع للوصول وحالة الطقس.\nأشكركم على حسن الاستماع. وأتمنى لكم رحلة سعيدة مع الاتحاد للطيران",
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"},
+            {"key": "flight_time", "label": "Flight Time", "placeholder": "X hrs XX min"},
+            {"key": "turbulence_time", "label": "Turbulence ETA", "placeholder": "hours, minutes"},
+            {"key": "delay_minutes", "label": "Delay", "placeholder": "XX min"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "welcome_outstation",
+      "title": "WELCOME — OUTSTATION TO AUH",
+      "order": 2,
+      "phase": "pre_departure",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 45,
+      "variants": [
+        {
+          "id": "welcome_outstation_default",
+          "label": null,
+          "note": null,
+          "body": "Good [morning/afternoon/evening] ladies and gentlemen and welcome on board*.\nThis is your [rank, first name] together with [ranks and first names of the flight crew].* It is our pleasure to take you to Abu Dhabi tonight/today and welcome you to our home – we're sure you'll have a great time here. You'll find plenty of inspiration and the best things to do on our Abu Dhabi channel on E-BOX. Just remember to keep your boarding pass from today's flight to receive exclusive deals and discounts.*\nOur planned flight time is {{flight_time}}**.\n\n• The weather on route is expected to be good*. However, I recommend keeping your seatbelts fastened whenever seated and please ensure seatbelts are fastened when the seatbelt sign is on**.\n• We are expecting some turbulence [on our route/ {{turbulence_time}} after takeoff]*. Please ensure you keep your seatbelt fastened whenever seated and when the seatbelt sign is on**.\n\nWe are currently expecting to depart\n• on time**.\n• ahead schedule**.\n• {{delay_minutes}} after our scheduled departure time\n  - due to heavy traffic**.\n  - due to weather**.\n  - as the final preparations have not yet been completed**.\n  - as we are waiting for the last few Guests**.\n\nPrior to our arrival at Abu Dhabi we will update you with the arrival time and weather*. Thank you and have a pleasant flight.",
+          "body_ar": "حضرات الضيوف الكرام أسعد الله صباحكم/ مساءكم بكل خير، مرحباً بكم على متن رحلتنا لهذا اليوم\nمعكم قائد الطائرة (...) بالأصالة عن نفسي وبالنيابة عن زميلي (....) وباقي أفراد طاقم الطائرة، يسرني التحليق بكم اليوم/الليلة إلى أبوظبي، وأتمنى لكم طيب الإقامة في ديرتنا أبوظبي.\n\nقبل بدء الاهبوط التدريجي إلى (اسم الوجهة)، سوف نوافيكم بالتوقيت المحلي المتوقع للوصول وحالة الطقس.\nأشكركم على حسن الاستماع. وأتمنى لكم رحلة سعيدة مع الاتحاد للطيران",
+          "fields": [
+            {"key": "flight_time", "label": "Flight Time", "placeholder": "X hrs XX min"},
+            {"key": "turbulence_time", "label": "Turbulence ETA", "placeholder": "hours, minutes"},
+            {"key": "delay_minutes", "label": "Delay", "placeholder": "XX min"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security_usa",
+      "title": "SECURITY FOR USA FLTS",
+      "order": 3,
+      "phase": "pre_departure",
+      "is_emergency": false,
+      "source": "suggested",
+      "duration_seconds": null,
+      "variants": [
+        {
+          "id": "security_usa_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen.\nUS Regulations require we inform you that during this flight today, you should not congregate in groups in any area of the aircraft cabin, especially around the lavatories and galley areas.\nWe would also ask that you strictly observe the seat belt sign when it is illuminated and do not move about the cabin when the seat belt sign is on.\nThank you.",
+          "body_ar": null,
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "remote_hold_pre_push",
+      "title": "ON GROUND REMOTE HOLD — PRE-PUSH",
+      "order": 4,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 15,
+      "variants": [
+        {
+          "id": "remote_hold_pre_push_default",
+          "label": null,
+          "note": "NOTE: Guests must be updated every 15 minutes.",
+          "body": "Ladies and gentlemen, this is your Captain.\nPlease be advised that we will be moving from our current parking position to a holding area\n• Until the weather improves*.\n• For our clearance*. (We are expected to be cleared for departure in {{clearance_time}})\nIn the meantime, please remain seated with your seatbelts comfortably fastened.\nThank you.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nتم إبلاغنا بتحريك الطائرة من موقع الوقوف الحالي والتوجه إلى منطقة انتظار جديدة؛\n• حتى تتحسن حالة الطقس.\n• حتى يتم التصريح لنا بالإقلاع (نتوقع أن يُصرّح بالإقلاع خلال xx دقيقة).\nفي هذه الأثناء، يرجى منكم البقاء جالسين في مقاعدكم مع ربط أحزمة المقاعد.\nشكراً لكم.",
+          "fields": [
+            {"key": "clearance_time", "label": "Clearance ETA", "placeholder": "XX min"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remote_hold_reached",
+      "title": "ON GROUND REMOTE HOLD — HOLD REACHED",
+      "order": 5,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 15,
+      "variants": [
+        {
+          "id": "remote_hold_reached_default",
+          "label": null,
+          "note": "NOTE: Guests must be updated every 15 minutes.",
+          "body": "Ladies and gentlemen, this is the Captain*.\nWe are directed to hold and wait\n• Until the weather improves*.\n• For our clearance*. (We are expected to be cleared for departure in {{clearance_time}})\nIn the meantime, please remain seated with your seatbelts comfortably fastened.\nThank you.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nتم إبلاغنا بإبقاء الطائرة في موقع الوقوف الحالي والانتظار؛\n• حتى تتحسن حالة الطقس.\n• حتى يتم التصريح لنا بالإقلاع (نتوقع أن يُصرّح بالإقلاع خلال xx دقيقة).\nفي هذه الأثناء، يرجى منكم البقاء جالسين في مقاعدكم مع ربط أحزمة المقاعد.\nشكراً لكم.",
+          "fields": [
+            {"key": "clearance_time", "label": "Clearance ETA", "placeholder": "XX min"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delay_ground",
+      "title": "DELAY ON GROUND",
+      "order": 6,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 15,
+      "variants": [
+        {
+          "id": "delay_ground_default",
+          "label": null,
+          "note": "NOTE: Guests must be updated every 15 minutes.",
+          "body": "Ladies and gentlemen, this is the Captain*.\nWe will be departing after our scheduled departure time\n• due to heavy traffic*.\n• due to weather*.\n• as the final preparations have not yet been completed*.\n• as we are waiting for the last few Guests*.\n• due to a minor technical issue*.\n• [other. Do not go into too much detail]*.\nWe should be on our way [in {{est_time}}/shortly]. Thank you.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nسوف نغادر بعد موعد الإقلاع المقرر؛\n• نظراً للحركة الكثيفة لوصول ومغادرة الطائرات.\n• بسبب حالة الطقس.\n• لأننا حالياً نقوم باستكمال التحضيرات النهائية للإقلاع.\n• حيث أننا بانتظار صعود آخر ضيوفنا إلى الطائرة.\n• لمواجهتنا مشكلة تقنية بسيطة.\nنتوقع الإقلاع [خلال XX دقيقة/بعد قليل]. شكراً لكم.",
+          "fields": [
+            {"key": "est_time", "label": "Est. Departure", "placeholder": "XX minutes"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delay_exceeded_1st",
+      "title": "DELAY — EXCEEDED 1ST TIME",
+      "order": 7,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 15,
+      "variants": [
+        {
+          "id": "delay_exceeded_1st_default",
+          "label": null,
+          "note": "NOTE: Guests must be updated every 15 minutes.",
+          "body": "Ladies and gentlemen, this is the Captain*.\nOur departure will be further delayed as\n• traffic is still heavy*.\n• the weather has not improved*.\n• we are still waiting for the final preparations to be completed*.\n• we are still waiting for the last few Guests*.\n• we are still removing /loading luggage*.\n• we are still resolving the technical issue.*\n• We should be on our way in less than {{est_time}} minutes.\n• We will update you of our progress within the next 15 minutes.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nسوف يتأخر موعد إقلاع رحلتنا لمدة إضافية؛\n• نظراً أن حركة وصول ومغادرة الطائرات لا تزال كثيفة.\n• نظراً لعدم تحسّن حالة الطقس.\n• لأننا حالياً لا نزال بانتظار استكمال التحضيرات النهائية للإقلاع.\n• نظراً لأننا لا نزال بانتظار صعود آخر ضيوفنا إلى الطائرة.\n• نظراً لأننا لا نزال نقوم بإنزال/تحميل الأمتعة.\n• نظراً لأننا لا نزال بانتظار الانتهاء من فحص المشكلة التقنية التي نواجهها.\nنتوقع الإقلاع [خلال XX دقيقة/بعد قليل]. شكراً لكم.\nسنوافيكم بالمستجدات خلال 15 دقيقة من الآن.",
+          "fields": [
+            {"key": "est_time", "label": "Est. Minutes", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delay_exceeded_2nd",
+      "title": "DELAY — EXCEEDED 2ND TIME",
+      "order": 8,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 15,
+      "variants": [
+        {
+          "id": "delay_exceeded_2nd_default",
+          "label": null,
+          "note": "NOTE: Guests must be updated every 15 minutes.",
+          "body": "Ladies and gentlemen, this is the Captain*.\nWe are still waiting\n• for the clearance*.\n• for the weather to improve*.\n• for the final preparations to be completed*.\n• for the last few Guests to board*.\n• for the luggage to be removed / loaded*.\n• resolving the technical issue.*\n• We should be on our way in less than {{est_time}} minutes*.\n• We will update you of our progress within the next 15 minutes*.\nWe apologize the inconvenience and we thank you for your patience and understanding.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nلا نزال بانتظار؛\n• التصريح بالمغادرة.\n• تحسّن حالة الطقس.\n• استكمال التحضيرات النهائية للإقلاع.\n• صعود آخر ضيوفنا إلى الطائرة.\n• إنزال/تحميل الأمتعة.\n• فحص المشكلة التقنية.\nنتوقع الإقلاع خلال أقل من [XX دقيقة]. شكراً لكم.\nسنوافيكم بالمستجدات خلال 15 دقيقة من الآن.\nنعتذر عن أي إزعاج ونشكر حسن تفهمكم وتعاونكم.",
+          "fields": [
+            {"key": "est_time", "label": "Est. Minutes", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delay_waiting_to",
+      "title": "DELAY — WAITING FOR T/O",
+      "order": 9,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 10,
+      "variants": [
+        {
+          "id": "delay_waiting_to_default",
+          "label": null,
+          "note": "NOTE: Guests must be updated every 15 minutes.",
+          "body": "Ladies and gentlemen, this is the Captain*.\nWe are currently number {{queue_position}} in line for departure. We should be taking off in about {{est_time}} minutes.\nThank you.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nترتيبنا الآن هو [XX] في طابور انتظار إقلاع الطائرات ونتوقع الإقلاع خلال [XX] دقائق.\nشكراً",
+          "fields": [
+            {"key": "queue_position", "label": "Queue Position", "placeholder": "XX"},
+            {"key": "est_time", "label": "Est. Minutes", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cancellation_ground",
+      "title": "CANCELLATION ON GROUND",
+      "order": 10,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 15,
+      "variants": [
+        {
+          "id": "cancellation_ground_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nDue to\n• the weather\n• the technical issue\n• operational restrictions\n• [specify other cause]\nWe are unable to proceed to {{destination}} as this flight is now cancelled*.\nWe apologize for the inconvenience. Our airport team will assist you in the terminal.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nنظراً؛\n• لسوء حالة الطقس.\n• لمواجهتنا مشكلة تقنية\n• لبعض القيود التشغيلية\n• [أي سبب آخر، أذكر السبب].\nفأننا لم نتمكن من متابعة رحلتنا هذه إلى (اسم الوجهة) حيث تم الآن إلغاء هذه الرحلة.\nنعتذر على الازعاج، سيقوم موظفونا بتقديم كافة المساعدات لكم في مبنى المطار.",
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "return_to_stand",
+      "title": "RETURN TO STAND",
+      "order": 11,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 15,
+      "variants": [
+        {
+          "id": "return_to_stand_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nWe are now returning to the [gate/stand] due to:\n• a technical issue\n• operational restrictions\n• [specify other cause]\nI shall provide you with an update as soon as I have more information*.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nنحن الآن في طريق عودتنا إلى (البوابة/ موقع الوقوف) نظراً:\n• لمواجهتنا مشكلة تقنية\n• لبعض القيود التشغيلية\n• [أي سبب آخر، أذكر السبب]\nسوف أوافيكم بآخر المستجدات فور ورود أي معلومات جديدة.",
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "de_icing",
+      "title": "DE-ICING",
+      "order": 12,
+      "phase": "ground_delay",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 10,
+      "variants": [
+        {
+          "id": "de_icing_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nAircraft de-icing will be carried out shortly. Once the procedure is completed we will be on our way.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nسوف نباشر بعملية إزالة الجليد المتراكم عن جسم الطائرة بعد قليل.\nسنواصل رحلتنا لهذا اليوم فور اكتمال عملية إزالة الجليد.",
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "rto_hard_braking",
+      "title": "RTO — HARD BRAKING",
+      "order": 13,
+      "phase": "rejected_to",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 25,
+      "variants": [
+        {
+          "id": "rto_hard_braking_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nI apologize for the hard braking a moment ago as I had to stop the aircraft as a precautionary safety measure*. We are evaluating the situation and will provide you with an update shortly.\n\n[Once information available:]\n• Return to stand\n• Ladies and gentlemen, this is the Captain*. Having evaluated the situation it is now safe for us to continue towards {{destination}}. Thank you for your understanding.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nأعتذر منكم على التوقّف المفاجئ الذي قمت به منذ قليل، حيث أنني اضطررت إلى استخدام مكابح الطائرة بالطاقة القصوى كتدبير احترازي يتعلق بسلامة الطائرة. نحن الآن نقيّم الوضع الأمني بشكلٍ عام، سوف أوافيكم بالمستجدات بعد قليل.\n\n[فور توّفر المعلومات]\n• سوف نعود إلى موقع الوقوف الخاص بطائرتنا\n• حضرات الضيوف الكرام، معكم قائد الطائرة مجدداً. بعد تقييم الوضع، قررنا أن وضع الطائرة آمن بشكل كامل لمتابعة رحلتنا لهذا اليوم إلى (اسم الوجهة).\nشاكرين لكم حسن تفهمكم و تعاونكم معنا.",
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rto_other",
+      "title": "RTO — OTHER THAN HARD BRAKING",
+      "order": 14,
+      "phase": "rejected_to",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 20,
+      "variants": [
+        {
+          "id": "rto_other_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nI had to stop the aircraft as a precautionary safety measure*. We are evaluating the situation and will provide you with an update shortly.\n\n[Once information available:]\n• Return to stand\n• Ladies and gentlemen, this is the captain*. Having evaluated the situation it is now safe for us to continue towards {{destination}}. Thank you for your understanding.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nأعتذر منكم على التوّقف المفاجئ أثناء عملية الإقلاع، حيث اضطررت لتوقيف الطائرة كتدبير احترازي يتعلق بسلامة الطائرة. نحن الآن نقيّم الوضع الأمني بشكلٍ عام، سوف أوافيكم بالمستجدات بعد قليل.\n\n[فور توّفر المعلومات]\n• سوف نعود إلى موقع الوقوف الخاص بطائرتنا\n• حضرات الضيوف الكرام، معكم قائد الطائرة مجدداً. بعد تقييم الوضع، قررنا أن وضع الطائرة آمن بشكل كامل لمتابعة رحلتنا لهذا اليوم إلى (اسم الوجهة).\nشاكرين لكم حسن تفهمكم و تعاونكم معنا.",
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emergency_landing_prep",
+      "title": "EMERGENCY LANDING PREPARATIONS",
+      "order": 15,
+      "phase": "in_flight",
+      "is_emergency": true,
+      "source": "handbook",
+      "duration_seconds": 20,
+      "variants": [
+        {
+          "id": "emergency_landing_prep_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nMay I have your attention**. Due to a malfunction, we will be making an emergency landing in {{landing_time}} minutes*.\nYou are required to follow the cabin crew instructions. Your full co-operation is essential for your continued safety.\nThank you.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nأرجو الانتباه. نظراً لحدوث خلل فني، سوف نضطر إلى إجراء هبوط اضطراري خلال [XX] دقيقة من الآن.\nأطالبكم جميعاً باتباع تعليمات طاقم الضيافة والتعاون معهم من أجل سلامتكم.\nشكراً لكم.",
+          "fields": [
+            {"key": "landing_time", "label": "Minutes to Landing", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diversion",
+      "title": "DIVERSION / RETURN TO FIELD",
+      "order": 16,
+      "phase": "in_flight",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 25,
+      "variants": [
+        {
+          "id": "diversion_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nDue to\n• weather conditions\n• a technical issue\n• operational reasons\n• a medical emergency\n• [other cause, specify]\nWe will have to divert/return to {{station}}**.\n\n[In case of fuel dumping]:\n• In preparation for landing, we need to reduce the weight of the aircraft. As a normal procedure, excess fuel will be released from the wings**.\n\nWe anticipate landing in {{landing_time}} minutes.\nThank you for your patience and understanding.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nنظراً؛\n• لسوء الأحوال الجوية\n• لمواجهتنا مشكلة تقنية\n• لبعض القيود التشغيلية.\n• لوجود حالة مرضية على متن الطائرة تحتاج إلى رعاية طبية عاجلة.\n• [أي سبب آخر، أذكر السبب]\nيتعين علينا تحويل الرحلة/ العودة إلى (اسم المطار).\n\n[في حالة تفريغ الوقود]\n• استعداداً للهبوط، نحن بحاجة إلى خفض وزن الطائرة. وكإجراء طبيعي، سيتم التخلّص من بعض الوقود الزائد عن طريق الأجنحة.\n\nنتوقع أن نهبط خلال [XX] دقيقة.\nنشكر لكم حسن تفهمكم وتعاونكم معنا.",
+          "fields": [
+            {"key": "station", "label": "Diversion Station", "placeholder": "city"},
+            {"key": "landing_time", "label": "Minutes to Landing", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fuel_dumping",
+      "title": "FUEL DUMPING",
+      "order": 17,
+      "phase": "in_flight",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 10,
+      "variants": [
+        {
+          "id": "fuel_dumping_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nIn preparation for landing, we need to reduce the weight of the aircraft.\nAs a normal procedure, excess fuel will be released from the wings**. We anticipate landing in {{landing_time}} minutes.\nThank you.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nاستعداداً للهبوط، نحن بحاجة إلى خفض وزن الطائرة. وكإجراء طبيعي، سيتم التخلّص من بعض الوقود الزائد عن طريق الأجنحة.\nنتوقع أن نهبط خلال [XX] دقيقة.\nشكراً لكم",
+          "fields": [
+            {"key": "landing_time", "label": "Minutes to Landing", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emergency_descent",
+      "title": "EMERGENCY DESCENT",
+      "order": 18,
+      "phase": "in_flight",
+      "is_emergency": true,
+      "source": "suggested",
+      "duration_seconds": null,
+      "variants": [
+        {
+          "id": "emergency_descent_default",
+          "label": null,
+          "note": null,
+          "body": "This is the captain. We have had to perform a rapid descent:",
+          "body_ar": null,
+          "sections": [
+            {
+              "id": "oxygen_required",
+              "label": "IF OXYGEN IS STILL REQUIRED:",
+              "body": "You must remain seated and continue to wear your oxygen masks.\nCabin crew may move in the cabin using portable oxygen."
+            },
+            {
+              "id": "oxygen_no_longer_required",
+              "label": "IF OXYGEN IS NO LONGER REQUIRED:",
+              "body": "You must remain seated. Oxygen is no longer required and you may remove your oxygen masks.\nCrew may move in the cabin."
+            }
+          ],
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "bomb_on_board",
+      "title": "BOMB ON BOARD",
+      "order": 19,
+      "phase": "in_flight",
+      "is_emergency": true,
+      "source": "suggested",
+      "duration_seconds": null,
+      "variants": [
+        {
+          "id": "bomb_gate_taxi",
+          "label": "GATE / TAXI",
+          "note": "RED WARNING",
+          "body": "This is the captain.\nLadies and gentlemen, we have been advised of a security threat to one of our aircraft. This will mean that this aircraft must be searched. You will have to disembark and take all personal belongings with you.\nPlease follow the instructions of the cabin crew.",
+          "body_ar": null,
+          "fields": []
+        },
+        {
+          "id": "bomb_flight",
+          "label": "FLIGHT",
+          "note": "RED WARNING",
+          "body": "This is the captain.\nLadies and gentlemen, due to a security concern we will be landing at {{diversion_city}} as a precaution. There is no cause for alarm. Please follow the instructions of the cabin crew.\nThank you for your cooperation.",
+          "body_ar": null,
+          "fields": [
+            {"key": "diversion_city", "label": "Diversion City", "placeholder": "city"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tod_auh",
+      "title": "TOP OF DESCENT — ABU DHABI",
+      "order": 20,
+      "phase": "approach",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 45,
+      "variants": [
+        {
+          "id": "tod_auh_default",
+          "label": "NORMAL",
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nWe will shortly be commencing our descent into Abu Dhabi. The fasten seat belt sign will be switched on during descent and will be kept on until we have reached our final parking position**. Depending on air traffic control, we expect to land\n• {{eta_early}} minutes ahead of schedule at {{eta_time}}*.\n• on time, at {{eta_time}}*.\n• at {{eta_time}}*.\nThe weather in Abu Dhabi is forecasted to be {{weather}} with temperature of {{temperature}} Celsius**.\nOn behalf of the entire crew, I would like to thank you for choosing to fly with Etihad Airways and welcome you to our home in the UAE. We'll shortly be showing a series of videos about Abu Dhabi, which we hope will inspire your time here. If you need any more information at all, please feel free to speak to one of your cabin crew**.\nPlease enjoy the rest of the flight.",
+          "body_ar": "حضرات الضيوف الكرام، معكم كابتن الطائرة ويسرني الترحيب بكم مجدداً.\nسوف نبدأ بالهبوط التدريجي نحو مطار أبوظبي الدولي، وسوف يتم بعد قليل إضاءة إشارة ربط أحزمة المقاعد، وستبقى مضاءة حتى وصول الطائرة إلى مرحلة التوّقف النهائية.\n\nمن المتوقع أن يكون الطقس في أبوظبي (...) عند الوصول، ودرجة الحرارة المتوقعة هي (XX) درجة مئوية.\n\nبالأصالة عن نفسي وبالنيابة عن كامل أفراد الطاقم، أشكر لكم اختياركم السفر مع الاتحاد للطيران، الناقل الوطني لدولة الإمارات العربية المتحدة، ويسرني الترحيب بكم في وطننا دولة الإمارات العربية المتحدة متمنيين لكم طيب الإقامة.\nنتمنى لكم الاستمتاع بالوقت المتبقي من الرحلة.",
+          "fields": [
+            {"key": "eta_early", "label": "Minutes Early", "placeholder": "XX"},
+            {"key": "eta_time", "label": "ETA", "placeholder": "HH:MM"},
+            {"key": "weather", "label": "Weather", "placeholder": "good with clear skies/cloudy/rainy"},
+            {"key": "temperature", "label": "Temperature", "placeholder": "XX"}
+          ]
+        },
+        {
+          "id": "tod_auh_delayed_made_up",
+          "label": "DELAYED DEP — MADE UP TIME",
+          "note": "Use when flight departed late but arrives on time or early.",
+          "body": "Ladies and gentlemen, this is the Captain.\nWe will be commencing our descent into Abu Dhabi. The fasten seat belt sign will be switched on during descent and will be kept on until we have reached our final parking position.\nDespite our delayed departure, I am pleased to let you know that we expect to land:\n• {{eta_early}} minutes ahead of schedule at {{eta_time}}\n• on time, at {{eta_time}}\n• at {{eta_time}}\nDepending on air traffic control.\nThe weather in Abu Dhabi is forecasted to be {{weather}} with temperature of {{temperature}} Celsius**.\nOn behalf of the entire crew, I would like to thank you for choosing to fly with Etihad Airways and welcome you to our home in the UAE**.\nPlease enjoy the rest of the flight.",
+          "body_ar": null,
+          "fields": [
+            {"key": "eta_early", "label": "Minutes Early", "placeholder": "XX"},
+            {"key": "eta_time", "label": "ETA", "placeholder": "HH:MM"},
+            {"key": "weather", "label": "Weather", "placeholder": "good with clear skies/cloudy/rainy"},
+            {"key": "temperature", "label": "Temperature", "placeholder": "XX"}
+          ]
+        },
+        {
+          "id": "tod_auh_early",
+          "label": "ARRIVING >10 MIN EARLY",
+          "note": "Use when flight has made up significant time (>10 min early).",
+          "body": "Ladies and gentlemen, this is the Captain.\nWe will be commencing our descent into Abu Dhabi. The fasten seat belt sign will be switched on during descent and will be kept on until we have reached our final parking position.\nI am pleased to let you know that we've made some time on route and expect to land:\n• at {{eta_time}}\n• {{eta_early}} minutes ahead of schedule at {{eta_time}}\nDepending on air traffic control.\nThe weather in Abu Dhabi is forecasted to be {{weather}} with temperature of {{temperature}} Celsius**.\nOn behalf of the entire crew, I would like to thank you for choosing to fly with Etihad Airways and welcome you to our home in the UAE**.\nPlease enjoy the rest of the flight.",
+          "body_ar": null,
+          "fields": [
+            {"key": "eta_early", "label": "Minutes Early", "placeholder": "XX"},
+            {"key": "eta_time", "label": "ETA", "placeholder": "HH:MM"},
+            {"key": "weather", "label": "Weather", "placeholder": "good with clear skies/cloudy/rainy"},
+            {"key": "temperature", "label": "Temperature", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tod_outstation",
+      "title": "TOP OF DESCENT — OUTSTATION",
+      "order": 21,
+      "phase": "approach",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 45,
+      "variants": [
+        {
+          "id": "tod_outstation_default",
+          "label": "NORMAL",
+          "note": null,
+          "body": "Ladies and gentlemen, this is the Captain*.\nWe will be commencing our descent into {{destination}}*. The fasten seat belt sign will be switched on during descent and will be kept on until we have reached our final parking position**. Depending on air traffic control, we expect to land\n• {{eta_early}} minutes ahead of schedule at {{eta_time}}*.\n• on time, at {{eta_time}}*.\n• at {{eta_time}}*.\nThe weather in {{destination}} is forecasted to be {{weather}} with temperature of {{temperature}} Celsius**.\nOn behalf of the entire crew, I would like to thank you for choosing to fly with Etihad Airways.\nPlease enjoy the rest of the flight.",
+          "body_ar": "حضرات الضيوف الكرام، معكم كابتن الطائرة ويسرني الترحيب بكم مجدداً.\nسوف نبدأ بالهبوط التدريجي نحو مطار (اسم المدينة).\n\nمن المتوقع أن يكون الطقس في (اسم المدينة) (...) عند الوصول، ودرجة الحرارة المتوقعة (XX) درجة مئوية.\nبالأصالة عن نفسي وبالنيابة عن كامل أفراد الطاقم، أشكر لكم اختياركم السفر مع الاتحاد للطيران، الناقل الوطني لدولة الإمارات العربية المتحدة.\nنتمنى لكم الاستمتاع بالوقت المتبقي من الرحلة.",
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"},
+            {"key": "eta_early", "label": "Minutes Early", "placeholder": "XX"},
+            {"key": "eta_time", "label": "ETA", "placeholder": "HH:MM"},
+            {"key": "weather", "label": "Weather", "placeholder": "good with clear skies/cloudy/rainy"},
+            {"key": "temperature", "label": "Temperature", "placeholder": "XX"}
+          ]
+        },
+        {
+          "id": "tod_outstation_delayed_made_up",
+          "label": "DELAYED DEP — MADE UP TIME",
+          "note": "Use when flight departed late but arrives on time or early.",
+          "body": "Ladies and gentlemen, this is the Captain.\nWe will be commencing our descent into {{destination}}*. The fasten seat belt sign will be switched on during descent and will be kept on until we have reached our final parking position.\nDespite our delayed departure, I am pleased to let you know that we expect to land:\n• {{eta_early}} minutes ahead of schedule at {{eta_time}}\n• on time, at {{eta_time}}\n• at {{eta_time}}\nDepending on air traffic control.\nThe weather in {{destination}}* is forecasted to be {{weather}} with temperature of {{temperature}} Celsius**.\nOn behalf of the entire crew, I would like to thank you for choosing to fly with Etihad Airways.\nPlease enjoy the rest of the flight.",
+          "body_ar": null,
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"},
+            {"key": "eta_early", "label": "Minutes Early", "placeholder": "XX"},
+            {"key": "eta_time", "label": "ETA", "placeholder": "HH:MM"},
+            {"key": "weather", "label": "Weather", "placeholder": "good with clear skies/cloudy/rainy"},
+            {"key": "temperature", "label": "Temperature", "placeholder": "XX"}
+          ]
+        },
+        {
+          "id": "tod_outstation_early",
+          "label": "ARRIVING >10 MIN EARLY",
+          "note": "Use when flight has made up significant time (>10 min early).",
+          "body": "Ladies and gentlemen, this is the Captain.\nWe will be commencing our descent into {{destination}}*. The fasten seat belt sign will be switched on during descent and will be kept on until we have reached our final parking position.\nI am pleased to let you know that we've made some time on route and expect to land:\n• at {{eta_time}}\n• {{eta_early}} minutes ahead of schedule at {{eta_time}}\nDepending on air traffic control.\nThe weather in {{destination}}* is forecasted to be {{weather}} with temperature of {{temperature}} Celsius**.\nOn behalf of the entire crew, I would like to thank you for choosing to fly with Etihad Airways.\nPlease enjoy the rest of the flight.",
+          "body_ar": null,
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"},
+            {"key": "eta_early", "label": "Minutes Early", "placeholder": "XX"},
+            {"key": "eta_time", "label": "ETA", "placeholder": "HH:MM"},
+            {"key": "weather", "label": "Weather", "placeholder": "good with clear skies/cloudy/rainy"},
+            {"key": "temperature", "label": "Temperature", "placeholder": "XX"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tod_jeddah",
+      "title": "TOD — FLTS TO JEDDAH",
+      "order": 22,
+      "phase": "approach",
+      "is_emergency": false,
+      "source": "suggested",
+      "duration_seconds": null,
+      "variants": [
+        {
+          "id": "tod_jeddah_default",
+          "label": null,
+          "note": "NOTE:\n(2 PAs to be done, at 1 hour and at 30 min before Ihram zone).",
+          "body": "Ladies and gentlemen, this is your captain.\nIf you are performing Umrah, you can start Ihram at any time you wish. We shall be passing the Miqat zone in 1 hour/30 minutes.\nThe time now is {{saudi_time}} (Local time in Saudi Arabia), I will give you another reminder 30 minutes before Miqat.",
+          "body_ar": null,
+          "fields": [
+            {"key": "saudi_time", "label": "Saudi Local Time", "placeholder": "HH:MM"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "go_around",
+      "title": "GO AROUND",
+      "order": 23,
+      "phase": "approach",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 20,
+      "variants": [
+        {
+          "id": "go_around_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and Gentlemen, this is the Captain*.\nAs a precautionary measure, we had to abort our approach due to\n• a request from Air Traffic Control*.\n• poor weather*.\n• operational reasons*.\nWe will commence another approach to {{destination}} shortly. Please remain seated and keep your seatbelts fastened.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nكإجراء احترازي، علينا إلغاء عملية الهبوط، والقيام بالتحليق فوق المطار\n• نتيجة لطلب من برج المراقبة الجوية في المطار.\n• نظراً لسوء الأحوال الجوية.\n• لأسباب تشغيلية.\nسوف نبدأ بالهبوط مرة أخرى إلى (اسم المطار) بعد قليل.\nيرجى البقاء جالسين في مقاعدكم والتأكد من ربط أحزمة المقاعد.",
+          "fields": [
+            {"key": "destination", "label": "Destination", "placeholder": "city"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delay_after_landing",
+      "title": "DELAY AFTER LANDING",
+      "order": 24,
+      "phase": "post_landing",
+      "is_emergency": false,
+      "source": "handbook",
+      "duration_seconds": 10,
+      "variants": [
+        {
+          "id": "delay_after_landing_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and Gentlemen, this is the Captain*.\nPlease remain seated with your seatbelt fastened as\n• we shall soon continue to taxi.\n• we have not yet reached our stand/gate.\n• we are not yet allowed to open the aircraft's doors.\nThank you.",
+          "body_ar": "حضرات الضيوف الكرام، معكم قائد الطائرة.\nيرجى منكم البقاء جالسين في مقاعدكم مع الإبقاء على أحزمة المقاعد مربوطة حيث أننا،\n• سنواصل السير بالطائرة على المَدَرج بعد قليل.\n• لم نصل بعد إلى موقع وقوف الطائرة/بوابة الوصول.\n• لم يُسمَح لنا حتى الآن بفتح أبواب الطائرة.\nشكراً لكم.",
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "remote_parking",
+      "title": "REMOTE PARKING POSITION",
+      "order": 25,
+      "phase": "post_landing",
+      "is_emergency": false,
+      "source": "suggested",
+      "duration_seconds": null,
+      "variants": [
+        {
+          "id": "remote_parking_default",
+          "label": null,
+          "note": null,
+          "body": "Ladies and gentlemen this is your captain.\nToday we are parking at an off-concourse stand. On deplaning please board the waiting buses that will transport you quickly and efficiently to the Arrival Halls for your connecting flight or to baggage claim.\nAnnouncements on the bus will provide further information.\nThank you for choosing to fly (company).",
+          "body_ar": null,
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "precautionary_disembarkation",
+      "title": "PRECAUTIONARY DISEMBARKATION",
+      "order": 26,
+      "phase": "post_landing",
+      "is_emergency": true,
+      "source": "suggested",
+      "duration_seconds": null,
+      "variants": [
+        {
+          "id": "precautionary_steps_avail",
+          "label": "STEPS AVAIL",
+          "note": null,
+          "body": "This is the Captain.\nAttention ladies and gentlemen. It is necessary to disembark the aircraft as a precaution from steps or at {{door_location}} (front left) of the aircraft.\nLeave all your belongings on the aircraft and follow the cabin crews' instructions.\nCabin crew prepare doors {{doors}} (e.g. L1 and L2) Cross check and open doors.",
+          "body_ar": null,
+          "fields": [
+            {"key": "door_location", "label": "Door Location", "placeholder": "e.g. L1"},
+            {"key": "doors", "label": "Doors to Prepare", "placeholder": "e.g. L1 and L2"}
+          ]
+        },
+        {
+          "id": "precautionary_steps_na",
+          "label": "STEPS N/A",
+          "note": null,
+          "body": "This is the Captain.\nAttention ladies and gentlemen. It is necessary to disembark the aircraft as a precaution using the emergency slides.\nLeave all your belongings on the aircraft and follow the cabin crews' instructions.\nCabin crew prepare doors {{doors}} (e.g. L1 and L2) Cross check and open doors.",
+          "body_ar": null,
+          "fields": [
+            {"key": "doors", "label": "Doors to Prepare", "placeholder": "e.g. L1 and L2"}
+          ]
+        }
+      ]
+    }
+  ]
+}

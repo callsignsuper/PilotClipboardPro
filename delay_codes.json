@@ -1,0 +1,255 @@
+{
+  "revision": "V25",
+  "effective_date": "2025-10-26",
+  "categories": [
+    {
+      "id": "others",
+      "name": "Others",
+      "code_range": "03–09",
+      "codes": [
+        { "code": "03", "sub": "A", "title": "DELAY DURATION UP TO 3MINS", "description": "Flight departure within 3 minutes of STD", "details": "Flight departure within 3 minutes of STD irrespective of delay reason", "owner": "X3", "controllability": "U" },
+        { "code": "04", "sub": "A", "title": "No Delay Code", "description": "No delay code received in Neo", "details": "", "owner": "OC", "controllability": "C" },
+        { "code": "04", "sub": "B", "title": "Inefficient coordination of turnaround activities", "description": "Inefficient coordination by aircraft dispatcher [AUH ONLY]", "details": "Dispatch errors; Inefficient coordination of turnaround activities; Late initiation of no-show guest baggage offload; late arrival of aircraft dispatcher", "owner": "OC", "controllability": "C" },
+        { "code": "05", "sub": "B", "title": "STANDBY DELAY CODE", "description": "Standby delay code while delay reason under investigation", "details": "To be re-allocated within 24 hours of departure; FO delay not accepted by PIC prior to departure (under investigation)", "owner": "XM", "controllability": "C" },
+        { "code": "06", "sub": "A", "title": "GATE/STAND AVAILABILITY", "description": "No gate or stand availability due to own airline activity", "details": "Awaiting stand at departure station", "owner": "XM", "controllability": "C" },
+        { "code": "06", "sub": "B", "title": "Tactical ground hold", "description": "Tactical ground hold due stand availability", "details": "Awaiting stand/slot at destination station", "owner": "OC", "controllability": "C" },
+        { "code": "07", "sub": "A", "title": "CDCP", "description": "Company Departure Control Programme", "details": "Planned delay initiated by NOC to protect guest- and/or baggage connectivity during mass disruption", "owner": "OC", "controllability": "C" },
+        { "code": "08", "sub": "A", "title": "SECURITY", "description": "AvSec Checks", "details": "Extraordinary AvSec checks required", "owner": "XM", "controllability": "U" },
+        { "code": "09", "sub": "A", "title": "INSUFFICIENT SCHEDULED GROUND TIME", "description": "Ground time less than declared standard ground time due base schedule", "details": "Built into base schedule (use 09B for changes initiated by NOC resulting in less than SGT turn time)", "owner": "SH", "controllability": "C" },
+        { "code": "09", "sub": "B", "title": "Insufficient ground time – NOC initiated", "description": "Ground time less than declared standard ground time due NOC initiated aircraft/time changes", "details": "Aircraft or STD/STA changes initiated by NOC resulting in less than SGT turn time (use 09A for base schedule turn time below SGT)", "owner": "OC", "controllability": "C" }
+      ]
+    },
+    {
+      "id": "passenger_baggage",
+      "name": "Passenger and Baggage",
+      "code_range": "11–18",
+      "codes": [
+        { "code": "11", "sub": "A", "title": "LATE CHECK IN", "description": "Acceptance of guests after flight closure for on-schedule ops", "details": "VIPs; Standby processing", "owner": "GS", "controllability": "C" },
+        { "code": "11", "sub": "B", "title": "Late acceptance – abnormal ops", "description": "Acceptance of guests after flight closure for abnormal ops", "details": "Late guest acceptance from another delayed/cancelled/overbooked flight; Guests delayed due to landside/ground transportation/weather", "owner": "GS", "controllability": "U" },
+        { "code": "12", "sub": "A", "title": "LATE CHECK IN", "description": "Congestion at check-in area", "details": "Lack of staff; Group check-in (use 87A for capacity constraints)", "owner": "GS", "controllability": "C" },
+        { "code": "13", "sub": "A", "title": "CHECK IN ERROR", "description": "Incorrectly processed passenger or baggage details", "details": "Incurred at station; Incurred via other channels (use 92R when caused by previous station's errors)", "owner": "GS", "controllability": "C" },
+        { "code": "14", "sub": "A", "title": "OVER SALES", "description": "Booking errors – not resolved at check-in", "details": "Reconciliation of overbooking (e.g. offloading, down/upgrading)", "owner": "GS", "controllability": "C" },
+        { "code": "15", "sub": "A", "title": "BOARDING", "description": "Boarding errors/discrepancies", "details": "Boarding error by gate staff; Guest figure discrepancies; Ground services initiated headcount", "owner": "GS", "controllability": "C" },
+        { "code": "15", "sub": "B", "title": "Paging/Missing passenger", "description": "Paging/Missing checked-in passenger without baggage offload", "details": "Guest arriving at gate after deadline", "owner": "GS", "controllability": "C" },
+        { "code": "15", "sub": "C", "title": "Slow (de-)boarding", "description": "Slow (de-)boarding", "details": "Slow (de-)boarding; Group processing; Excessive wheelchairs ex inbound only (Use 16C for outbound wheelchairs)", "owner": "GS", "controllability": "U" },
+        { "code": "15", "sub": "D", "title": "Hand luggage issues", "description": "Hand luggage issues during boarding", "details": "Excess hand luggage retrieval during boarding", "owner": "GS", "controllability": "C" },
+        { "code": "15", "sub": "E", "title": "Seating issues", "description": "Seating issues during boarding", "details": "Guest seating problems caused by editing (use 92R when caused by previous station's errors)", "owner": "GS", "controllability": "C" },
+        { "code": "15", "sub": "F", "title": "Documentation issues", "description": "Documentation issues during boarding (passport, visa, boarding pass)", "details": "Slow documentation check; Gate offloading of locally checked-in guest/baggage due to incorrect documentation", "owner": "GS", "controllability": "C" },
+        { "code": "16", "sub": "A", "title": "COMMERCIAL PUBLICITY/GUEST CONVENIENCE", "description": "Commercial publicity, VIP, press handling", "details": "Commercial publicity; Press or media activities; VIP handling", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "B", "title": "Guest convenience", "description": "Guest convenience, missing property or travel documents", "details": "Passenger searching for missing property/document", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "C", "title": "Special needs handling", "description": "Special needs handling", "details": "Disabled/Wheelchair guest handling; slow embarkation (for late reporting of handling staff use 34A; for late disembarkation of wheelchairs from inbound flight use 15C)", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "D", "title": "Gate medical assessment", "description": "Gate medical assessment or medical offload", "details": "Assessment and/or involuntary offloading of guest (incl. baggage) due medical reasons at the gate (use 16J for onboard medical assessment/offload)", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "E", "title": "Abnormal guest handling", "description": "Abnormal guest handling", "details": "Repatriation/Deportation handling; Inadmissible handling; Disruptive guest handling", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "F", "title": "Guest seating on board", "description": "Guest refusing to sit in assigned seat", "details": "Guest refusing to sit in assigned seat (use 15E when caused by editing issues)", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "G", "title": "Voluntary offload", "description": "Voluntary offload for personal reasons", "details": "Voluntary offload for personal reasons", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "H", "title": "Guest settling on board", "description": "Slow settling of guests on board", "details": "Slow settling of guests on board", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "I", "title": "Guest boarding process", "description": "Maintaining standard guest boarding process to protect boarding related NPS", "details": "Maintaining standard guest boarding process to protect boarding related NPS", "owner": "GS", "controllability": "U" },
+        { "code": "16", "sub": "J", "title": "Onboard medical assessment", "description": "Onboard medical assessment or medical offload", "details": "Assessment and/or involuntary offloading of guest (incl. baggage) due medical reasons onboard the aircraft (use 16D for boarding gate medical assessment/offload)", "owner": "IF", "controllability": "U" },
+        { "code": "17", "sub": "A", "title": "CATERING ORDER", "description": "Late or incorrect order given to supplier", "details": "Late order; Incorrect order; Late order of non-standard supplies", "owner": "OC", "controllability": "C" },
+        { "code": "18", "sub": "A", "title": "BAGGAGE PROCESSING", "description": "Late or incorrectly sorted local baggage", "details": "Late delivery of local baggage; Late delivery of bulky baggage; Lack of staff/equipment (use 87B for baggage system breakdown)", "owner": "GH", "controllability": "C" },
+        { "code": "18", "sub": "B", "title": "Transfer baggage", "description": "Late or incorrectly sorted transfer baggage", "details": "Late or incorrectly sorted transfer baggage; Lack of staff/equipment (use 91B for late inbound transfer baggage; use 87D when congestion due capacity limitations)", "owner": "GH", "controllability": "C" },
+        { "code": "18", "sub": "C", "title": "Transfer baggage – outstation error", "description": "Late or incorrectly sorted transfer baggage due outstation error", "details": "Late delivery of transfer baggage when caused by outstation error (use 91B for late inbound transfer baggage)", "owner": "GH", "controllability": "C" }
+      ]
+    },
+    {
+      "id": "cargo_mail",
+      "name": "Cargo and Mail",
+      "code_range": "21–24",
+      "codes": [
+        { "code": "21", "sub": "A", "title": "CARGO AND MAIL DOCUMENTATION", "description": "Late or incorrect load figures for booked cargo and mail", "details": "Late/Incorrect cargo and mail figures; Late UWS presented to loadmaster", "owner": "CG", "controllability": "C" },
+        { "code": "21", "sub": "B", "title": "Documentation errors", "description": "Late or incorrect documentation for booked cargo and mail", "details": "Late/Incorrect cargo and mail documents", "owner": "CG", "controllability": "C" },
+        { "code": "21", "sub": "C", "title": "NOTOC errors", "description": "Late or incorrect NOTOC for booked cargo/special loads", "details": "Late/Incorrect NOTOC presented to LC/loadmaster/flight crew", "owner": "CG", "controllability": "C" },
+        { "code": "22", "sub": "A", "title": "CARGO AND MAIL LATE POSITIONING", "description": "Late delivery of cargo/mail from warehouse (GHA)", "details": "Late/Lack of manpower and/or ground service equipment by GHA", "owner": "GH", "controllability": "C" },
+        { "code": "22", "sub": "B", "title": "Warehouse staffing/equipment", "description": "Late delivery of cargo/mail from warehouse (cargo)", "details": "Late/Lack of manpower and/or servicing equipment in cargo warehouse", "owner": "CG", "controllability": "C" },
+        { "code": "22", "sub": "C", "title": "Transit cargo", "description": "Late delivery of transit cargo", "details": "Late delivery of QRT connecting cargo; Incorrect QRT cargo details; Incorrect QRT build up by origin station", "owner": "CG", "controllability": "C" },
+        { "code": "23", "sub": "A", "title": "CARGO AND MAIL LATE ACCEPTANCE", "description": "Late acceptance of cargo", "details": "Acceptance of cargo after deadline", "owner": "CG", "controllability": "C" },
+        { "code": "23", "sub": "B", "title": "Late acceptance – commercial", "description": "Late acceptance of cargo for commercial reasons", "details": "Acceptance of cargo after deadline requested by Cargo Commercial", "owner": "EC", "controllability": "C" },
+        { "code": "24", "sub": "A", "title": "CARGO AND MAIL INADEQUATE PACKING", "description": "Re-packaging and/or re-labelling of cargo and mail", "details": "Load shifting en-route to aircraft; Dangerous goods insufficiently labeled", "owner": "CG", "controllability": "C" },
+        { "code": "24", "sub": "B", "title": "Incorrect ULD build", "description": "Incorrect contour/build of ULD", "details": "Incorrect contour/build of ULD", "owner": "CG", "controllability": "C" }
+      ]
+    },
+    {
+      "id": "aircraft_ramp_handling",
+      "name": "Aircraft and Ramp Handling",
+      "code_range": "31–39",
+      "codes": [
+        { "code": "31", "sub": "A", "title": "LATE/INACCURATE AIRCRAFT DOCUMENTATION", "description": "Late/inaccurate weight and balance documentation from local station", "details": "Late/incorrect load sheet (local load control); Late/incorrect LIR; Incorrect data in DCS; Late/incorrect passenger documents", "owner": "GH", "controllability": "C" },
+        { "code": "31", "sub": "B", "title": "W&B documentation – CLC", "description": "Late/inaccurate weight and balance documentation from CLC", "details": "Late/incorrect load sheet (CLC); Late/incorrect LIR (CLC); Incorrect data in DCS (CLC); Only applicable when information sent to CLC by station on time", "owner": "LC", "controllability": "C" },
+        { "code": "32", "sub": "A", "title": "LOADING/UNLOADING", "description": "Special/Bulky load handling", "details": "Special/Bulky cargo difficult to load/unload/move (no pre-notification received)", "owner": "GH", "controllability": "U" },
+        { "code": "32", "sub": "B", "title": "Loading staff issues", "description": "Late, lack of, or errors from loading staff", "details": "Late loaders; Lack of loading staff; Incorrect loading (e.g. not according to load plan)", "owner": "GH", "controllability": "C" },
+        { "code": "32", "sub": "C", "title": "Manual loading/unloading", "description": "Manual loading/unloading", "details": "Extra time required due manual loading/unloading of containerized aircraft (e.g. PDU in-op)", "owner": "GH", "controllability": "U" },
+        { "code": "32", "sub": "D", "title": "Narrow-body high-density baggage", "description": "Additional time taken to maximize baggage uplift on narrow-body", "details": "Extra time required due to high volume of hold baggage given hold space constraint (e.g. 300+ bags on A320 or A321)", "owner": "GH", "controllability": "U" },
+        { "code": "33", "sub": "A", "title": "LOADING EQUIPMENT", "description": "Late, lack of, or breakdown of loading equipment", "details": "Late/Incorrect equipment; Lack/Breakdown of equipment (e.g. high loader, tugs)", "owner": "GH", "controllability": "C" },
+        { "code": "34", "sub": "A", "title": "SERVICING EQUIPMENT", "description": "Late, lack of, or breakdown of servicing equipment; Late, lack of, or errors from servicing staff", "details": "Late/Incorrect equipment; Lack/Breakdown of equipment (e.g. guest stairs, guest coaches, toilet/water servicing); late/lack of crew transport provision", "owner": "GH", "controllability": "C" },
+        { "code": "35", "sub": "A", "title": "AIRCRAFT CLEANING", "description": "Late or inadequate cleaning", "details": "Late completion; Insufficient/Incorrect equipment; Late/Lack of cabin supplies; Lack of cleaning staff (use 68A if called back to aircraft after crew acceptance)", "owner": "CL", "controllability": "C" },
+        { "code": "35", "sub": "B", "title": "Special cleaning", "description": "Special cleaning requirements", "details": "Extraordinary additional cleaning required (e.g. soiled seats); Late cleaning due aircraft change/off-schedule operations", "owner": "CL", "controllability": "U" },
+        { "code": "36", "sub": "A", "title": "FUELLING/DEFUELLING", "description": "Late or incorrect fuelling", "details": "Late fuel truck/refueller; Lack/Breakdown of fuel truck; Fuelling error/spill", "owner": "GH", "controllability": "C" },
+        { "code": "36", "sub": "B", "title": "Slow fuelling", "description": "Slow fuelling", "details": "Slow fuelling due operational requirements, local requirements, weather", "owner": "GH", "controllability": "C" },
+        { "code": "37", "sub": "A", "title": "CATERING", "description": "Lack of or breakdown of catering equipment; Late, lack of, or errors from catering staff", "details": "Lack/Breakdown of equipment; Insufficient/Incorrect catering; Lack of catering staff; Late loading", "owner": "CT", "controllability": "C" },
+        { "code": "38", "sub": "A", "title": "ULD", "description": "Lack of and/or unserviceable ULDs/pallets", "details": "Lack of and/or unserviceable ULDs/pallets", "owner": "CG", "controllability": "C" },
+        { "code": "39", "sub": "A", "title": "TECHNICAL RAMP EQUIPMENT", "description": "Late, lack of, or breakdown of technical ramp equipment", "details": "Late/Incorrect equipment; Lack/Breakdown of equipment (e.g. GPU, de-icing equipment, tow bar, pushback, air start, air-conditioning unit); Late/Lack of staff; Errors from staff", "owner": "GH", "controllability": "C" },
+        { "code": "39", "sub": "B", "title": "Late tow to departure stand", "description": "Late tow to departure stand due late/lack/breakdown of technical ramp equipment", "details": "Aircraft towed late to departure stand due late/lack/breakdown of technical ramp equipment; Errors from staff (use 89C for late tow caused by ATC holds)", "owner": "GH", "controllability": "C" }
+      ]
+    },
+    {
+      "id": "technical_equipment",
+      "name": "Technical and Aircraft Equipment",
+      "code_range": "41–49",
+      "codes": [
+        { "code": "41", "sub": "A", "title": "TECHNICAL DEFECTS", "description": "Defects identified during transit incl. MEL items (other than cabin/IFE)", "details": "Defects identified during transit; Application of MEL; Lack of manpower", "owner": "TE", "controllability": "C" },
+        { "code": "41", "sub": "B", "title": "Cabin defects", "description": "Defects identified during transit incl. MEL items (cabin items)", "details": "Cabin outfit malfunctions (e.g. galleys, seats)", "owner": "TE", "controllability": "C" },
+        { "code": "41", "sub": "C", "title": "IFE defects", "description": "Defects identified during transit incl. MEL items (IFE items)", "details": "Defects on inflight entertainment system", "owner": "TE", "controllability": "C" },
+        { "code": "41", "sub": "D", "title": "Technical documentation", "description": "Technical documentation associated with defects identified during transit", "details": "Awaiting Flight Ops/Technical Dispensation/Concession; Missing technical documents; MEL clarification", "owner": "TE", "controllability": "C" },
+        { "code": "42", "sub": "A", "title": "SCHEDULED MAINTENANCE", "description": "Late release from scheduled maintenance", "details": "Work overrun; Late availability or lack of manpower; Awaiting staff/equipment for towing operations", "owner": "TE", "controllability": "C" },
+        { "code": "42", "sub": "B", "title": "Maintenance documentation/personnel", "description": "Technical documentation/personnel issues during scheduled maintenance", "details": "Late/Incorrect completion of documentation; Awaiting engineer sign-off; Lack/Late completion of ETL (use 58A for ETL sync failure)", "owner": "TE", "controllability": "C" },
+        { "code": "43", "sub": "A", "title": "NON SCHEDULED MAINTENANCE", "description": "Special checks and/or additional works beyond normal maintenance schedule", "details": "Special checks (e.g. ADs); Repairs due aircraft damage", "owner": "TE", "controllability": "C" },
+        { "code": "44", "sub": "A", "title": "SPARES AND MAINTENANCE", "description": "Spares and maintenance equipment, lack of, or breakdown", "details": "Lack of spares, lack of and/or breakdown of specialist equipment required for defect rectification", "owner": "TE", "controllability": "C" },
+        { "code": "45", "sub": "A", "title": "AOG SPARES", "description": "Spares to be carried to another station", "details": "Awaiting AOG spare(s) to be carried to another station", "owner": "TE", "controllability": "U" },
+        { "code": "46", "sub": "R", "title": "AIRCRAFT CHANGE", "description": "Aircraft change for technical reasons", "details": "Aircraft change for technical reasons (e.g. prolonged or rolling technical delay)", "owner": "TE", "controllability": "C" },
+        { "code": "48", "sub": "A", "title": "SCHEDULED CABIN CONFIGURATION", "description": "Guest special need works", "details": "Stretcher installation/removal (use 99A when scheduled ground time is less than 3hrs); Medical equipment installation/removal", "owner": "TE", "controllability": "C" },
+        { "code": "49", "sub": "A", "title": "APU INOPERATIVE / ENGINE START PRIOR PUSHBACK", "description": "APU inoperative (notified in advance) / engine start on stand", "details": "APU inoperative (notified in advance) and/or engine start on stand (use 41A for first occurrence of APU defect, use 39A for technical equipment issues)", "owner": "TE", "controllability": "U" }
+      ]
+    },
+    {
+      "id": "damage",
+      "name": "Damage to Aircraft",
+      "code_range": "51–53",
+      "codes": [
+        { "code": "51", "sub": "A", "title": "DAMAGE DURING FLIGHT OPERATIONS", "description": "Damage & damage assessment due unforeseen flight operations events", "details": "Bird strike; Lightning strike; Severe weather conditions; FOD in movement area", "owner": "XM", "controllability": "U" },
+        { "code": "51", "sub": "B", "title": "Damage – flight ops SOPs", "description": "Damage & damage assessment due incorrect application of flight operations SOPs", "details": "Overweight/heavy/hard landing; Collision during taxiing; Aircraft overrun runway/taxiway; Tail scrapes", "owner": "FO", "controllability": "C" },
+        { "code": "51", "sub": "C", "title": "Damage – guest caused", "description": "Damage & damage assessment due damage to aircraft interior caused by guest", "details": "Damaged seat / table; damage to lavatory caused by passengers", "owner": "XM", "controllability": "U" },
+        { "code": "52", "sub": "A", "title": "DAMAGE DURING GROUND OPERATIONS", "description": "Damage & damage assessment during ground operations ramp activity at station", "details": "Loading/Unloading; Loading equipment; Technical ramp equipment; Catering equipment; Stairs/Air bridge; Towing operations; FOD in ramp area", "owner": "GH", "controllability": "C" },
+        { "code": "52", "sub": "B", "title": "Damage – previous sector", "description": "Damage assessment during ground operations with damage caused on previous sectors", "details": "Aircraft damage caused by ground operations identified at station with damage having occurred on previous sector", "owner": "GH", "controllability": "U" },
+        { "code": "53", "sub": "A", "title": "GPS NAVIGATION FAULT", "description": "Failure/inaccurate aircraft positioning data due external factors", "details": "Inaccurate aircraft positioning data as a result of external interference / airfield environment e.g. GPS Spoofing/Jamming", "owner": "XM", "controllability": "U" }
+      ]
+    },
+    {
+      "id": "it_communication",
+      "name": "Information Technology / Communication",
+      "code_range": "55–58",
+      "codes": [
+        { "code": "55", "sub": "A", "title": "DEPARTURE CONTROL", "description": "Localised DCS/check-in system outage/latency", "details": "DCS / Load control system failure/slow response; Local/Host network failure/slow response (e.g. SITA) - localised to station/CLC facility", "owner": "IT", "controllability": "U" },
+        { "code": "55", "sub": "B", "title": "Network DCS outage", "description": "Network DCS/check-in system outage/latency", "details": "DCS / Load control system failure/slow response; network-wide", "owner": "IT", "controllability": "U" },
+        { "code": "55", "sub": "C", "title": "Airline DCS malfunctions", "description": "Airline DCS/Load control system outage/malfunctions", "details": "Airline DCS/Load control system user interface issues (use 55A/55B for localised/network-wide failures)", "owner": "IT", "controllability": "C" },
+        { "code": "56", "sub": "A", "title": "CARGO PREPARATION/DOCUMENTATION SYSTEM", "description": "Failure/Slow response of cargo system", "details": "Cargo system failure/slow response", "owner": "IT", "controllability": "C" },
+        { "code": "57", "sub": "A", "title": "FLIGHT PLANNING SYSTEM", "description": "Failure/Slow response of flight planning system", "details": "LIDO system failure/slow response", "owner": "IT", "controllability": "C" },
+        { "code": "58", "sub": "A", "title": "COMMUNICATION", "description": "Failure of airline's communication systems at airport", "details": "Failure of airline's communication systems (e.g. eATL connectivity; ETL synchronizing failure | use 87B for airport communication system failures)", "owner": "IT", "controllability": "U" },
+        { "code": "58", "sub": "B", "title": "Regulatory System Outage", "description": "Regulatory System Outage", "details": "Failure of local government advanced passenger processing systems; APP, TSA, iAPI, etc", "owner": "XA", "controllability": "C" }
+      ]
+    },
+    {
+      "id": "flight_ops_crewing",
+      "name": "Flight Operations and Crewing",
+      "code_range": "61–69",
+      "codes": [
+        { "code": "61", "sub": "A", "title": "FLIGHT DOCUMENTATION", "description": "Late completion of, alterations to, or errors with flight plan", "details": "Late/Incorrect completion of flight plan; Changed/amended flight plan; Late/incorrect filing of ATC flight plan; Company communication system failure with ATC", "owner": "FO", "controllability": "C" },
+        { "code": "61", "sub": "B", "title": "Missing/errors with flight documentation", "description": "Missing or errors with other flight documentation", "details": "Missing Flight Operations documentation; Request for clarification on incorrect flight deck documentation", "owner": "FO", "controllability": "C" },
+        { "code": "61", "sub": "C", "title": "GENDEC errors", "description": "Late completion, alterations, or errors with GENDEC", "details": "Late/Incorrect publication of GENDEC; Change/Amendment to GENDEC", "owner": "CC", "controllability": "C" },
+        { "code": "62", "sub": "A", "title": "OPERATIONAL REQUIREMENT", "description": "Late/Change fuel notification from flight deck", "details": "Late/Incorrect advice of fuel figures from flight deck", "owner": "FO", "controllability": "C" },
+        { "code": "62", "sub": "B", "title": "Fuel notification – operations", "description": "Late/Change fuel notification from operations", "details": "Late/Incorrect advice of fuel figures from operations; Revised fuel uplift due operational requirements (e.g. reclearance top-ups)", "owner": "OC", "controllability": "C" },
+        { "code": "62", "sub": "C", "title": "Late load alteration", "description": "Late alteration of load due to operational requirement", "details": "Load alteration due to payload, technical, operational, or any other restriction; Late passing of final ZFW; Extra fuel required due to load change; Trim limitations", "owner": "OC", "controllability": "C" },
+        { "code": "63", "sub": "A", "title": "LATE CREW BOARDING", "description": "Late flight deck (and cabin crew) boarding (other than standby)", "details": "Late reporting/sign-on; Late for transportation pick-up; Late to aircraft", "owner": "FO", "controllability": "C" },
+        { "code": "63", "sub": "B", "title": "Crew transportation delay", "description": "Delayed flight deck/cabin crew due late/lack of transportation", "details": "Late/Lack of airside transportation (use 34A at Hub); Late/Lack of hotel/crew accommodation pick-up; Late arrival at airport due local conditions", "owner": "GH", "controllability": "U" },
+        { "code": "63", "sub": "C", "title": "Crew – airport processes", "description": "Delayed flight deck/cabin crew due airport processes and procedures", "details": "Late arrival of crew at aircraft due local processes and procedures (e.g. US CBP process)", "owner": "FO", "controllability": "U" },
+        { "code": "63", "sub": "D", "title": "Crew – pre-flight testing", "description": "Delayed flight deck/cabin crew due pre-flight testing requirements", "details": "Late arrival of crew at aircraft due health & safety related testing requirements (e.g. PCR testing)", "owner": "FO", "controllability": "U" },
+        { "code": "64", "sub": "A", "title": "FLIGHT DECK CREW LIMITATION", "description": "Flight Deck – Flight and duty limitations", "details": "Flight time limitations; Mandatory/Minimum crew rest; Acclimatisation rules", "owner": "CC", "controllability": "U" },
+        { "code": "64", "sub": "B", "title": "Standby flight deck – late reporting", "description": "Awaiting standby flight deck reporting beyond minimum call-out report time", "details": "Stand-by flight deck reported past 75min report time from call-out", "owner": "FO", "controllability": "C" },
+        { "code": "64", "sub": "C", "title": "Standby flight deck – sickness/no-show", "description": "Awaiting standby flight deck crew due late reporting of sickness or no-show", "details": "Awaiting stand-by flight deck crew due late reporting of sickness by crew member to Crew Control or no-show at reporting time", "owner": "FO", "controllability": "C" },
+        { "code": "64", "sub": "D", "title": "Standby flight deck – late call-out", "description": "Awaiting standby/augmented/extra flight deck crew due late call-out by Crew Control", "details": "Awaiting standby, augmented, or extra flight deck crew as a result of late call-out by Crew Control", "owner": "CC", "controllability": "C" },
+        { "code": "64", "sub": "E", "title": "Other crewing error – Flight Deck", "description": "Other crewing error – Flight Deck", "details": "Crew rostering error/flight insufficiently crewed/incorrect crew complement etc.", "owner": "CC", "controllability": "C" },
+        { "code": "64", "sub": "F", "title": "Standby – sickness after reporting", "description": "Awaiting standby crew due sickness/injury of flight deck crew after reporting for duty", "details": "Awaiting standby flight deck crew due sickness/injury of flight deck crew after reporting for duty", "owner": "FO", "controllability": "U" },
+        { "code": "65", "sub": "A", "title": "FLIGHT DECK CREW SPECIAL REQUEST", "description": "Flight deck request for technical assessment/document clarification", "details": "Request for maintenance; Request for clarification of flight deck documentation (use 61B for missing/incorrect flight deck documentation)", "owner": "FO", "controllability": "C" },
+        { "code": "65", "sub": "B", "title": "Holding/Delaying beyond requirements", "description": "Holding/Delaying beyond operational requirements", "details": "Holding/Delaying guest boarding beyond operational requirements; Deliberate hold due operational reasons (other than technical or weather)", "owner": "FO", "controllability": "C" },
+        { "code": "67", "sub": "A", "title": "CABIN CREW LIMITATION", "description": "Cabin Crew – Flight and duty limitations", "details": "Flight time limitations; Mandatory/Minimum crew rest; Acclimatisation rules", "owner": "CC", "controllability": "C" },
+        { "code": "67", "sub": "B", "title": "Standby cabin crew – late reporting", "description": "Awaiting standby cabin crew reporting beyond minimum call-out report time", "details": "Stand-by cabin crew reported past 75min report time from call-out", "owner": "CC", "controllability": "C" },
+        { "code": "67", "sub": "C", "title": "Standby cabin crew – sickness/no-show", "description": "Awaiting standby cabin crew due late reporting of sickness or no-show", "details": "Awaiting standby cabin crew due late reporting of sickness by crew member to Crew Control or no-show at pick-up time", "owner": "IF", "controllability": "C" },
+        { "code": "67", "sub": "D", "title": "Standby cabin crew – late call-out", "description": "Awaiting standby/augmented/extra cabin crew due late call-out by Crew Control", "details": "Awaiting standby, augmented or extra cabin crew as a result of late call-out by Crew Control", "owner": "CC", "controllability": "C" },
+        { "code": "67", "sub": "E", "title": "Other crewing error – Cabin Crew", "description": "Other crewing error – Cabin Crew", "details": "Crew rostering error; Flight insufficiently crewed; Incorrect crew complement, etc.", "owner": "CC", "controllability": "C" },
+        { "code": "67", "sub": "F", "title": "Standby – cabin crew sickness after reporting", "description": "Awaiting standby crew due sickness/injury of cabin crew after reporting for duty", "details": "Awaiting standby cabin crew due sickness/injury of cabin crew after reporting for duty", "owner": "IF", "controllability": "U" },
+        { "code": "68", "sub": "A", "title": "CABIN CREW SPECIAL REQUEST", "description": "Cabin Crew request beyond operational requirements", "details": "Re-order/Late request for additional catering/equipment; Re-order/Late request for additional cleaning/toilet", "owner": "IF", "controllability": "C" },
+        { "code": "68", "sub": "B", "title": "Cabin crew holding/delaying", "description": "Holding/Delaying guest boarding beyond operational requirements", "details": "Holding/Delaying guest boarding beyond operational requirements; Late or extended pre-flight checks", "owner": "IF", "controllability": "C" },
+        { "code": "68", "sub": "C", "title": "Cabin crew errors", "description": "Cabin crew errors", "details": "Incorrect head count; Evacuation slide deployed; Late/Lack of cabin spraying procedures", "owner": "IF", "controllability": "C" },
+        { "code": "68", "sub": "D", "title": "SUPPORT CREW LIMITATIONS", "description": "Loadmaster / Riding Engineer – Flight and Duty Limitations & crewing errors", "details": "Flight Time Limitations; Mandatory/Minimum crew rest; Acclimatisation rules; Awaiting standby support crew; Crew rostering error", "owner": "CC", "controllability": "C" },
+        { "code": "69", "sub": "A", "title": "CAPTAIN REQUEST FOR SECURITY CHECK", "description": "Extraordinary requests outside mandatory requirements", "details": "Extraordinary requests outside mandatory requirements", "owner": "FO", "controllability": "C" }
+      ]
+    },
+    {
+      "id": "weather",
+      "name": "Weather",
+      "code_range": "71–77",
+      "codes": [
+        { "code": "71", "sub": "A", "title": "DEPARTURE STATION", "description": "Changes/Actions due weather change/ambient conditions at origin", "details": "Outside aircraft limits; Weather below operating limits; Extra fuel/payload alterations due weather change", "owner": "XW", "controllability": "U" },
+        { "code": "72", "sub": "A", "title": "DESTINATION STATION", "description": "Destination below operating limits", "details": "Outside aircraft limits; Weather below operating limits", "owner": "OC", "controllability": "U" },
+        { "code": "72", "sub": "F", "title": "Tactical ground hold – weather", "description": "Tactical ground hold", "details": "Forecast ambient weather conditions with NOC scheduled ground hold at origin due reduced flow rate", "owner": "OC", "controllability": "C" },
+        { "code": "73", "sub": "A", "title": "DESTINATION ALTERNATE", "description": "Destination/en-route alternates below operating limits", "details": "Weather below operating limits; ETOPS alternates closed due weather; En-route restrictions due alternates below operating limits", "owner": "OC", "controllability": "U" },
+        { "code": "75", "sub": "A", "title": "DE-ICING OF AIRCRAFT", "description": "Removal of snow and ice", "details": "De-icing on stand; Lack of fluid (use 39A for equipment/staffing matters; use 87C for remote de-icing)", "owner": "GH", "controllability": "U" },
+        { "code": "76", "sub": "A", "title": "REMOVAL OF SNOW, ICE, WATER AND SAND", "description": "Clearing of runways and taxiways", "details": "Clearing of runways and taxiways; Lack of stands due weather conditions", "owner": "XW", "controllability": "U" },
+        { "code": "77", "sub": "A", "title": "GROUND HANDLING IMPAIRED BY ADVERSE WEATHER", "description": "High winds, heavy rains, blizzards, typhoons, monsoons, extreme temps", "details": "Interruption of fuelling, servicing or (un-)loading; Apron conditions; High winds affecting door operation limits; Extreme outside temperatures affecting aircraft performance", "owner": "XW", "controllability": "U" },
+        { "code": "77", "sub": "B", "title": "Ambient cabin temperature", "description": "Ambient cabin temperature", "details": "Interruption/Held boarding due ambient cabin temperature (use 39A for equipment/staffing matters)", "owner": "XW", "controllability": "U" }
+      ]
+    },
+    {
+      "id": "atfm",
+      "name": "Air Traffic Flow Management (ATFM)",
+      "code_range": "81–84",
+      "codes": [
+        { "code": "81", "sub": "O", "title": "OMAN FIR CONGESTION", "description": "Oman/Muscat FIR en-route delays", "details": "En-route ATC delays associated with separation requirements of flights transiting Oman FIR", "owner": "OC", "controllability": "U" },
+        { "code": "81", "sub": "A", "title": "ATFM – en-route capacity", "description": "ATFM Capacity/Demand constraints en-route", "details": "General en-route ATC demand/Capacity constraints; En-route military exercise", "owner": "OC", "controllability": "U" },
+        { "code": "82", "sub": "A", "title": "ATFM – en-route staff/equipment", "description": "ATFM staff/equipment en-route", "details": "Reduced capacity due industrial action/staff shortage; equipment failure; extraordinary demand due capacity reduction in neighbouring area", "owner": "OC", "controllability": "U" },
+        { "code": "83", "sub": "A", "title": "AIRSPACE/DESTINATION ATC RESTRICTION", "description": "ATFM restriction at destination airport", "details": "Destination airspace closed due runway obstruction/industrial action/staff shortage/political unrest/noise abatement/night curfew/special flights", "owner": "OC", "controllability": "U" },
+        { "code": "84", "sub": "A", "title": "ATFM – weather at destination/en-route", "description": "ATFM restriction due weather at destination/en-route", "details": "Reduced airspace capacity caused by adverse weather conditions en-route / destination FIR", "owner": "OC", "controllability": "U" }
+      ]
+    },
+    {
+      "id": "airport_government",
+      "name": "Airport and Government Authorities",
+      "code_range": "85–89",
+      "codes": [
+        { "code": "85", "sub": "A", "title": "MANDATORY SECURITY", "description": "Guests and baggage", "details": "Baggage identification/offload due missing guest; Mandatory guest offload with baggage; Security check involving guests and checked/hand luggage", "owner": "GS", "controllability": "C" },
+        { "code": "85", "sub": "B", "title": "Airport/Government security", "description": "Airport/Government security authorities", "details": "Extraordinary check requested by airport/government authorities; Lack/Breakdown of airport security equipment; Late/Lack of security staff; Congestion at security facilities; Bomb threat", "owner": "XA", "controllability": "U" },
+        { "code": "85", "sub": "C", "title": "Airport Police escort/screening", "description": "Airport Police baggage escort/screening oversight", "details": "Late/lack of police for escort of baggage (joining/transfer/other) or oversight of x-ray screening facilities", "owner": "XA", "controllability": "U" },
+        { "code": "85", "sub": "E", "title": "DVU document clarification", "description": "DVU guest offload/hold for document clarification", "details": "Guest offload/holding due further clarification of travel documentation by DVU", "owner": "GS", "controllability": "U" },
+        { "code": "85", "sub": "U", "title": "US DHS checks", "description": "US DHS checks", "details": "Passenger secondary screening in line with US Department of Homeland Security (DHS) requirements", "owner": "XA", "controllability": "U" },
+        { "code": "86", "sub": "A", "title": "CUSTOMS, IMMIGRATION, HEALTH (CIH/CBP)", "description": "Guests and baggage", "details": "Insufficient travel doc of guests/INAD/deportee; Incoming guest checks; Guest detained by CIH", "owner": "XA", "controllability": "U" },
+        { "code": "86", "sub": "B", "title": "CIH authorities", "description": "CIH authorities", "details": "Extraordinary checks of guests/cargo/aircraft by CIH causing delay; Lack/Breakdown of CIH equipment/system; Late/Lack of CIH staff; Congestion at CIH facilities", "owner": "XA", "controllability": "U" },
+        { "code": "86", "sub": "U", "title": "US CBP authorities", "description": "US CBP authorities", "details": "Extraordinary checks of guests/aircraft by CBP authorities causing delay in embarkation; Lack/Breakdown of CBP equipment/system", "owner": "XA", "controllability": "U" },
+        { "code": "87", "sub": "A", "title": "AIRPORT FACILITIES", "description": "Terminal infrastructure/congestion limitations", "details": "Terminal building limitations/congestion (use 85/86 for Security/CIH delay); Insufficient check-in counters, holding area & gates", "owner": "XA", "controllability": "U" },
+        { "code": "87", "sub": "B", "title": "Airport IT malfunctions", "description": "Airport IT system malfunctions", "details": "CUTE equipment slow/failure; PA/FIDS failure; BIWIS & BRS system failure; boarding control system failure/slow response", "owner": "XA", "controllability": "U" },
+        { "code": "87", "sub": "C", "title": "Airside infrastructure", "description": "Airside infrastructure limitations", "details": "Roadway/tarmac congestion affecting coach/equipment operation; Late/Lack of 'Follow Me' vehicle", "owner": "XA", "controllability": "U" },
+        { "code": "87", "sub": "D", "title": "Airside facility limitations", "description": "Airside facility limitations", "details": "Facility capacity limitations; Transfer Baggage/US CBP Baggage/Catering & Cargo facilities", "owner": "XA", "controllability": "U" },
+        { "code": "87", "sub": "E", "title": "Airport equipment malfunctions", "description": "Airport facility equipment malfunctions", "details": "Baggage sorting system failure; Lighting/Electricity failure; Screening machines failure; Passenger boarding bridge inoperative", "owner": "XA", "controllability": "U" },
+        { "code": "88", "sub": "A", "title": "RESTRICTIONS AT AIRPORT OF DESTINATION", "description": "Destination airport closed/restricted", "details": "Restriction due curfew; Noise abatement; Political unrest; Industrial action; Construction work/maintenance; Military activity; Special/VIP flight/stands", "owner": "XA", "controllability": "U" },
+        { "code": "89", "sub": "A", "title": "RESTRICTIONS AT AIRPORT OF DEPARTURE", "description": "Departure airport and/or runway/taxiway closed/restricted", "details": "Restriction due to curfew; Noise abatement; Political unrest; Industrial action; Military activity; Special/VIP flight", "owner": "XA", "controllability": "U" },
+        { "code": "89", "sub": "B", "title": "Awaiting start-up/pushback clearance", "description": "Awaiting start-up and/or pushback clearance at departure airport", "details": "Movement area congestion; ATC (ground movement); Simultaneous pushback conflict", "owner": "XA", "controllability": "U" },
+        { "code": "89", "sub": "C", "title": "Late tow to departure stand", "description": "Late tow to departure stand", "details": "Aircraft towed late to departure stand due movement area congestion; ATC holds (use 39B for late tow due technical ramp equipment)", "owner": "XA", "controllability": "U" }
+      ]
+    },
+    {
+      "id": "reactionary",
+      "name": "Reactionary",
+      "code_range": "91–96",
+      "codes": [
+        { "code": "91", "sub": "B", "title": "LOAD CONNECTION", "description": "Awaiting baggage from another late inbound Etihad flight", "details": "Flight hold awaiting only baggage from another late inbound Etihad flight (detail in SI section & daily shift report how many bags and which flight they originated from)", "owner": "OC", "controllability": "C" },
+        { "code": "91", "sub": "C", "title": "Awaiting QRT/TRU/cargo", "description": "Awaiting QRT/TRU/cargo from EY/OAL late inbound flight", "details": "Flight hold/delayed awaiting QRT/TRU/Cargo from EY/another airlines (partner airline or code-share) inbound flight", "owner": "EC", "controllability": "C" },
+        { "code": "91", "sub": "F", "title": "Extra connection time", "description": "Extra time taken to connect guests in addition to pre-approved load connection time", "details": "Flight hold awaiting guests and/or baggage from another late inbound Etihad flight in addition to pre-approved load connection time by NOC", "owner": "OC", "controllability": "C" },
+        { "code": "91", "sub": "R", "title": "Awaiting guests from late inbound", "description": "Awaiting guests (incl. baggage) from another late inbound Etihad flight", "details": "Flight hold awaiting guests (incl. baggage) from another late inbound Etihad flight (detail in SI section how many guests and which flight)", "owner": "OC", "controllability": "C" },
+        { "code": "91", "sub": "O", "title": "Awaiting guests – other airline", "description": "Awaiting guest and/or baggage from another airlines late inbound flight", "details": "Flight hold awaiting guest and/or baggage from another airlines (partner airline or code-share) inbound flight", "owner": "OC", "controllability": "C" },
+        { "code": "92", "sub": "R", "title": "THROUGH CHECK-IN ERROR (TCI)", "description": "Guest check-in error at originating station", "details": "Delays/Offloads due incorrect/incomplete documentation (e.g. API, boarding passes, visa, passport); Oversize/Pieces hand luggage", "owner": "GS", "controllability": "C" },
+        { "code": "93", "sub": "R", "title": "AIRCRAFT ROTATION", "description": "Late arrival of aircraft from another flight or previous sector", "details": "Applicable to all delays caused by late arrival of aircraft from another flight or previous sector", "owner": "XR", "controllability": "U" },
+        { "code": "94", "sub": "R", "title": "CABIN CREW ROTATION", "description": "Awaiting cabin crew from another flight", "details": "Awaiting cabin crew (only) from another flight (detail in SI section & daily shift report inbound flight number)", "owner": "CC", "controllability": "U" },
+        { "code": "95", "sub": "R", "title": "CREW ROTATION", "description": "Awaiting flight crew (or entire crew) from another flight", "details": "Awaiting flight crew (or entire crew) from another flight (including deadheading crew members)", "owner": "CC", "controllability": "U" },
+        { "code": "96", "sub": "O", "title": "OPERATIONS CONTROL", "description": "Abnormal operations", "details": "Re-routing; Diversions; Flight consolidation", "owner": "OC", "controllability": "U" },
+        { "code": "96", "sub": "R", "title": "Aircraft change – non-technical", "description": "Aircraft changes for reasons other than technical", "details": "Aircraft change for non-technical reasons (e.g. aircraft ground/flight damage) or subsequent aircraft changes due AOG situations (use 46R for initial aircraft change due technical)", "owner": "OC", "controllability": "U" },
+        { "code": "96", "sub": "T", "title": "Non-Mandatory Technical Defect Rectification", "description": "Non-Mandatory Technical Defect Rectification", "details": "Apply if the flight is held from Operations Control to rectify technical defects (MEL could be applied)", "owner": "OC", "controllability": "C" }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "name": "Miscellaneous",
+      "code_range": "99",
+      "codes": [
+        { "code": "99", "sub": "A", "title": "MISCELLANEOUS", "description": "No suitable code", "details": "This code shall be used only when it is clear that a reason cannot be matched to a code above (explain details in SI section, daily shift report)", "owner": "XM", "controllability": "C" }
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@
   "groups": [
     {
       "id": "group_1",
-      "name": "Group 1 â Departure",
+      "name": "Group 1 – Departure",
       "phase": "Departure",
       "description": "Standard departure fuel codes with phase prefix D (Departure)",
       "codes": [
@@ -33,7 +33,7 @@
     },
     {
       "id": "group_2",
-      "name": "Group 2 â En-route / Arrival",
+      "name": "Group 2 – En-route / Arrival",
       "phase": "En-route / Arrival",
       "description": "En-route (E) and Arrival (A) fuel codes. ZFW, MEL, and SCF codes are not applicable for en-route/arrival.",
       "codes": [
@@ -46,7 +46,7 @@
     },
     {
       "id": "group_3",
-      "name": "Group 3 â Departure Only (Special)",
+      "name": "Group 3 – Departure Only (Special)",
       "phase": "Departure Only",
       "description": "New special fuel codes used at Departure ONLY. These do not follow the phase-prefix naming convention.",
       "codes": [

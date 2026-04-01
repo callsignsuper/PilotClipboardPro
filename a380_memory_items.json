@@ -1,0 +1,238 @@
+{
+    "aircraft_type": "A380",
+    "source": "FCOM QRH - Memory Items",
+    "revision": "28 NOV 24 / 31 MAR 21",
+    "version": 2,
+    "categories": [
+        {"id": "brakes", "name": "BRAKES", "items": ["loss_of_braking"]},
+        {"id": "misc", "name": "MISC", "items": ["emer_descent", "stall_recovery", "stall_warning_at_liftoff"]},
+        {"id": "nav", "name": "NAV", "items": ["unreliable_air_speed_indication"]},
+        {"id": "surv", "name": "SURV", "items": ["taws_caution", "taws_warning", "tcas_caution_ta", "tcas_warning_ra", "windshear_warning_reactive"]}
+    ],
+    "memory_items": [
+        {
+            "id": "loss_of_braking",
+            "title": "LOSS OF BRAKING",
+            "category": "brakes",
+            "fcom_ident": "PRO-ABN-BRAKES-00013173.0001001",
+            "fcom_date": "31 MAR 21",
+            "applicable_to": "ALL",
+            "preamble": "This emergency procedure is not displayed on the ECAM, and should be performed by memory if the braking system does not automatically reconfigure after a significant failure.",
+            "sections": [
+                {"type": "condition", "text": "If no braking :"},
+                {"type": "action", "level": 1, "item": "REV", "action": "MAX", "role": "PF"},
+                {"type": "explanation", "level": 2, "text": "If needed, the flight crew may keep maximum reverse thrust until full aircraft stop."},
+                {"type": "action", "level": 1, "item": "BRAKE PEDALS", "action": "RELEASE", "role": null},
+                {"type": "explanation", "level": 2, "text": "When the flight crew sets the A-SKID to OFF, the control of the braking system is transferred from the BCS to the EBCU, and the emergency braking mode is activated. Consequently the PF should release the brake pedals before the PM selects the A-SKID off. This action avoids brutal braking application."},
+                {"type": "action", "level": 1, "item": "A-SKID OFF", "action": "ORDER", "role": "PF"},
+                {"type": "explanation", "level": 2, "text": "The PF orders the PM to select the A-SKID OFF."},
+                {"type": "action", "level": 1, "item": "A-SKID", "action": "OFF", "role": "PM"},
+                {"type": "action", "level": 1, "item": "BRAKE PEDALS", "action": "PRESS", "role": "PF"},
+                {"type": "explanation", "level": 2, "text": "The pressure on the brakes is automatically limited."},
+                {"type": "condition", "text": "If still no braking :"},
+                {"type": "action", "level": 1, "item": "PARK BRK", "action": "ON", "role": "PF"},
+                {"type": "explanation", "level": 2, "text": "The ultimate braking mode is activated. If the ground spoilers are not extended, the parking brake only is activated."}
+            ]
+        },
+        {
+            "id": "emer_descent",
+            "title": "EMER DESCENT",
+            "category": "misc",
+            "fcom_ident": "PRO-ABN-MISC-00029288.0001001",
+            "fcom_date": "31 MAR 21",
+            "applicable_to": "ALL",
+            "preamble": null,
+            "sections": [
+                {"type": "action", "level": 1, "item": "CREW OXY MASKS", "action": "USE", "role": null},
+                {"type": "action", "level": 1, "item": "SIGNS", "action": "ON", "role": null},
+                {"type": "action", "level": 1, "item": "EMER DESCENT", "action": "INITIATE", "role": null},
+                {"type": "condition", "text": "If A/THR is not active:"},
+                {"type": "action", "level": 1, "item": "ALL THR LEVERS", "action": "IDLE", "role": null},
+                {"type": "action", "level": 1, "item": "SPEED BRAKE LEVER", "action": "FULL", "role": null}
+            ]
+        },
+        {
+            "id": "stall_recovery",
+            "title": "STALL RECOVERY",
+            "category": "misc",
+            "fcom_ident": "PRO-ABN-MISC-00017165.0001001",
+            "fcom_date": "28 NOV 24",
+            "applicable_to": "ALL",
+            "preamble": "As soon as any stall indication (could be aural warning, buffet, etc.) is recognized, apply the immediate actions:",
+            "sections": [
+                {"type": "action", "level": 1, "item": "NOSE DOWN PITCH CONTROL", "action": "APPLY", "role": null},
+                {"type": "explanation", "level": 2, "text": "This will reduce angle of attack."},
+                {"type": "note", "text": "In the case of lack of pitch down authority, reducing thrust may be necessary."},
+                {"type": "action", "level": 1, "item": "BANK", "action": "WINGS LEVEL", "role": null},
+                {"type": "condition", "text": "When out of stall (no longer stall indications):"},
+                {"type": "action", "level": 1, "item": "THRUST", "action": "INCREASE SMOOTHLY AS NEEDED", "role": null},
+                {"type": "note", "text": "In the case of one engine inoperative, progressively compensate the thrust asymmetry with rudder."},
+                {"type": "action", "level": 1, "item": "SPEEDBRAKES", "action": "CHECK RETRACTED", "role": null},
+                {"type": "action", "level": 1, "item": "FLIGHT PATH", "action": "RECOVER SMOOTHLY", "role": null},
+                {"type": "condition", "text": "If in clean configuration and below 20 000 ft:"},
+                {"type": "action", "level": 1, "item": "FLAPS 1", "action": "SELECT", "role": null},
+                {"type": "note", "text": "If a risk of ground contact exists, once clearly out of stall (no longer stall indications), establish smoothly a positive climb gradient."}
+            ]
+        },
+        {
+            "id": "stall_warning_at_liftoff",
+            "title": "STALL WARNING AT LIFTOFF",
+            "category": "misc",
+            "fcom_ident": "PRO-ABN-MISC-00029281.0001001",
+            "fcom_date": "28 NOV 24",
+            "applicable_to": "ALL",
+            "preamble": "If stall warnings trigger at liftoff, apply the following immediate actions:",
+            "sections": [
+                {"type": "action", "level": 1, "item": "THRUST", "action": "TOGA", "role": null},
+                {"type": "condition", "text": "At the same time:"},
+                {"type": "action", "level": 1, "item": "PITCH ATTITUDE", "action": "12.5°", "role": null},
+                {"type": "action", "level": 1, "item": "BANK", "action": "WINGS LEVEL", "role": null}
+            ]
+        },
+        {
+            "id": "unreliable_air_speed_indication",
+            "title": "UNRELIABLE AIR SPEED INDICATION",
+            "category": "nav",
+            "fcom_ident": "PRO-ABN-NAV-00029289.0001001",
+            "fcom_date": "31 MAR 21",
+            "applicable_to": "ALL",
+            "preamble": null,
+            "sections": [
+                {"type": "condition", "text": "IF SAFE CONDUCT OF FLIGHT IMPACTED :"},
+                {"type": "action", "level": 1, "item": "AP", "action": "OFF", "role": null},
+                {"type": "action", "level": 1, "item": "A/THR", "action": "OFF", "role": null},
+                {"type": "action", "level": 1, "item": "FD", "action": "OFF", "role": null},
+                {"type": "condition", "text": "Before thrust reduction:"},
+                {"type": "action", "level": 1, "item": "ALL THR LEVERS", "action": "TOGA", "role": null},
+                {"type": "action", "level": 1, "item": "PITCH TRGT", "action": "see table", "role": null},
+                {"type": "explanation", "level": 2, "text": "The ECAM displays only the appropriate pitch."},
+                {"type": "table", "level": 2, "title": "Before thrust reduction", "headers": ["Altitude", "Pitch TRGT"], "rows": [["Below 10 000 ft", "12.5°"], ["Above 10 000 ft", "10°"]]},
+                {"type": "condition", "text": "After thrust reduction:"},
+                {"type": "condition", "text": "If derated climb engaged:"},
+                {"type": "action", "level": 1, "item": "ALL THR LEVERS", "action": "MCT", "role": null},
+                {"type": "explanation", "level": 2, "text": "Set all thrust levers to MCT in order to cancel the derated climb."},
+                {"type": "action", "level": 1, "item": "ALL THR LEVERS", "action": "CLB", "role": null},
+                {"type": "action", "level": 1, "item": "PITCH TRGT", "action": "see table", "role": null},
+                {"type": "table", "level": 2, "title": "After thrust reduction", "headers": ["Altitude", "Pitch TRGT"], "rows": [["Below 10 000 ft", "12.5°"], ["Between 10 000 ft and 25 000 ft", "10°"], ["Above 25 000 ft", "5°"]]},
+                {"type": "condition", "text": "Below FL 250:"},
+                {"type": "condition", "text": "If the flaps lever is set to FULL:"},
+                {"type": "action", "level": 1, "item": "FLAPS", "action": "SELECT CONF 3", "role": null},
+                {"type": "action", "level": 1, "item": "FLAPS & L/G", "action": "MAINTAIN CURRENT CONF", "role": null},
+                {"type": "action", "level": 1, "item": "SPEED BRAKES", "action": "CHECK RETRACTED", "role": null}
+            ]
+        },
+        {
+            "id": "taws_caution",
+            "title": "TAWS CAUTION",
+            "category": "surv",
+            "fcom_ident": "PRO-ABN-SURV-MEM15-00017468.0001001",
+            "fcom_date": "31 MAR 21",
+            "applicable_to": "ALL",
+            "preamble": "The TAWS detects potential hazardous situation with respect to surrounding terrain.",
+            "sections": [
+                {"type": "condition", "text": "For TERRAIN TERRAIN / TOO LOW TERRAIN / TERRAIN AHEAD / OBSTACLE AHEAD:"},
+                {"type": "action", "level": 1, "item": "During night or IMC", "action": "APPLY TAWS WARNING PROC", "role": null},
+                {"type": "action", "level": 1, "item": "Daylight VMC terrain in sight", "action": "FLIGHT PATH — ADJUST", "role": null},
+                {"type": "condition", "text": "For SINK RATE / GLIDE SLOPE:"},
+                {"type": "action", "level": 1, "item": "Above 1000ft IMC / 500ft VMC", "action": "FLIGHT PATH — ADJUST", "role": null},
+                {"type": "action", "level": 1, "item": "Below 1000ft IMC / 500ft VMC", "action": "GO-AROUND — CONSIDER", "role": null},
+                {"type": "condition", "text": "For DON'T SINK:"},
+                {"type": "action", "level": 1, "item": "FLIGHT PATH", "action": "ADJUST", "role": null},
+                {"type": "condition", "text": "For TOO LOW GEAR / TOO LOW FLAPS:"},
+                {"type": "action", "level": 1, "item": "GO-AROUND", "action": "PERFORM", "role": null}
+            ]
+        },
+        {
+            "id": "taws_warning",
+            "title": "TAWS WARNING",
+            "category": "surv",
+            "fcom_ident": "PRO-ABN-SURV-MEM20-00027170.0001001",
+            "fcom_date": "28 NOV 24",
+            "applicable_to": "ALL",
+            "preamble": "The TAWS detects: An excessive rate of descent (PULL UP), a terrain collision threat (TERRAIN AHEAD, PULL UP), or an obstacle collision threat (OBSTACLE AHEAD, PULL UP).",
+            "sections": [
+                {"type": "condition", "text": "If the TAWS triggers one of the PULL UP alerts:"},
+                {"type": "condition", "text": "Simultaneously:"},
+                {"type": "action", "level": 1, "item": "AP", "action": "OFF", "role": null},
+                {"type": "action", "level": 1, "item": "PITCH", "action": "PULL UP", "role": null},
+                {"type": "explanation", "level": 2, "text": "Pull up to full backstick and maintain in that position."},
+                {"type": "action", "level": 1, "item": "THRUST LEVERS", "action": "TOGA", "role": null},
+                {"type": "action", "level": 1, "item": "SPEED BRAKE LEVER", "action": "CHECK RETRACTED", "role": null},
+                {"type": "action", "level": 1, "item": "BANK", "action": "WINGS LEVEL or ADJUST", "role": null},
+                {"type": "explanation", "level": 2, "text": "Aircraft obtain the best climb performance when the wings are as level as possible. The flight crew can adjust bank while climbing, provided that turning is the safest action."},
+                {"type": "action", "level": 1, "item": "DO NOT CHANGE CONFIGURATION (SLATS/FLAPS, GEAR) UNTIL CLEAR OF OBSTACLE", "action": "", "role": null}
+            ]
+        },
+        {
+            "id": "tcas_caution_ta",
+            "title": "TCAS CAUTION - TRAFFIC ADVISORY",
+            "category": "surv",
+            "fcom_ident": "PRO-ABN-SURV-MEM30-00017479.0001001",
+            "fcom_date": "31 MAR 21",
+            "applicable_to": "ALL",
+            "preamble": "The TCAS (in the SURV system) detects a Traffic Advisory (TA).",
+            "sections": [
+                {"type": "action", "level": 1, "item": "TCAS MODE", "action": "CHECK ARMED", "role": null},
+                {"type": "action", "level": 1, "item": "If A/THR off: A/THR", "action": "ON (Recommended)", "role": null},
+                {"type": "action", "level": 1, "item": "Do NOT maneuver based on TA only", "action": "", "role": null},
+                {"type": "explanation", "level": 2, "text": "Ensure ATC instructions are followed. AFS selections will not disarm TCAS Mode."}
+            ]
+        },
+        {
+            "id": "tcas_warning_ra",
+            "title": "TCAS WARNING - RESOLUTION ADVISORY",
+            "category": "surv",
+            "fcom_ident": "PRO-ABN-SURV-MEM35-00029286.0001001",
+            "fcom_date": "31 MAR 21",
+            "applicable_to": "ALL",
+            "preamble": "The TCAS (in the SURV system) detects a Resolution Advisory (RA).",
+            "sections": [
+                {"type": "condition", "text": "For all RA, except CLIMB RA in CONF 3 or FULL:"},
+                {"type": "condition", "text": "If AP engaged and TCAS mode engages:"},
+                {"type": "action", "level": 1, "item": "VERTICAL SPEED", "action": "MONITOR", "role": null},
+                {"type": "action", "level": 1, "item": "State", "action": "\"TCAS\"", "role": null},
+                {"type": "condition", "text": "If AP off:"},
+                {"type": "action", "level": 1, "item": "FD ORDERS", "action": "FOLLOW", "role": null},
+                {"type": "action", "level": 1, "item": "VERTICAL SPEED", "action": "MONITOR", "role": null},
+                {"type": "condition", "text": "Any CLIMB RA during approach in CONF 3 or FULL:"},
+                {"type": "action", "level": 1, "item": "GO-AROUND", "action": "PERFORM", "role": null},
+                {"type": "action", "level": 1, "item": "VERTICAL SPEED", "action": "MONITOR", "role": null},
+                {"type": "action", "level": 1, "item": "ATC", "action": "NOTIFY", "role": null},
+                {"type": "condition", "text": "When CLEAR OF CONFLICT:"},
+                {"type": "action", "level": 1, "item": "AP/FD", "action": "FOLLOW", "role": null},
+                {"type": "action", "level": 1, "item": "ATC", "action": "NOTIFY", "role": null},
+                {"type": "action", "level": 1, "item": "SPEED / LATERAL / VERTICAL GUIDANCE", "action": "ADJUST", "role": null},
+                {"type": "note", "text": "If TCAS MODE not available: Announce 'TCAS, I HAVE CONTROL'. AP OFF. Both FDs OFF. Adjust pitch to keep VSI in green."}
+            ]
+        },
+        {
+            "id": "windshear_warning_reactive",
+            "title": "WINDSHEAR WARNING - REACTIVE WINDSHEAR",
+            "category": "surv",
+            "fcom_ident": "PRO-ABN-SURV-MEM630-00027178.0001001",
+            "fcom_date": "28 NOV 24",
+            "applicable_to": "ALL",
+            "preamble": "If the systems or the flight crew detect windshear, apply the following procedure:",
+            "sections": [
+                {"type": "condition", "text": "At Takeoff:"},
+                {"type": "explanation", "level": 2, "text": "During the takeoff roll, WINDSHEAR alert is inhibited. Windshear recognition is based on flight crew observation."},
+                {"type": "condition", "text": "Before V1:"},
+                {"type": "explanation", "level": 2, "text": "If there are significant variations in airspeed, and in airspeed trend below the indicated V1, reject the takeoff."},
+                {"type": "condition", "text": "After V1:"},
+                {"type": "action", "level": 1, "item": "THR LEVERS", "action": "TOGA", "role": null},
+                {"type": "action", "level": 1, "item": "REACHING VR", "action": "ROTATE", "role": null},
+                {"type": "action", "level": 1, "item": "SRS ORDERS", "action": "FOLLOW", "role": null},
+                {"type": "note", "text": "If the FD bars are not displayed, move toward an initial pitch attitude of 12.5°. Then, if necessary, to prevent a loss of altitude, increase the pitch attitude."},
+                {"type": "condition", "text": "When airborne, during initial climb, or at landing:"},
+                {"type": "action", "level": 1, "item": "THR LEVERS AT TOGA", "action": "SET OR CONFIRM", "role": null},
+                {"type": "action", "level": 1, "item": "AP (if engaged)", "action": "KEEP ON", "role": null},
+                {"type": "action", "level": 1, "item": "SRS ORDERS", "action": "FOLLOW", "role": null},
+                {"type": "explanation", "level": 2, "text": "If necessary, the flight crew may apply full backstick."},
+                {"type": "note", "text": "If the FD bars are not displayed, move toward an initial pitch attitude of 12.5°. Then, if necessary, to prevent a loss of altitude, increase the pitch attitude."},
+                {"type": "action", "level": 1, "item": "DO NOT CHANGE CONFIGURATION (SLATS/FLAPS, GEAR) UNTIL OUT OF WINDSHEAR", "action": "", "role": null},
+                {"type": "action", "level": 1, "item": "CAREFULLY MONITOR FLIGHT PATH AND SPEED", "action": "", "role": null},
+                {"type": "action", "level": 1, "item": "WHEN OUT OF WINDSHEAR, SMOOTHLY RECOVER NORMAL CLIMB", "action": "", "role": null}
+            ]
+        }
+    ]
+}
